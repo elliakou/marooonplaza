@@ -1,0 +1,1355 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'ldapjs', '-g' ]
+2 info using npm@1.1.36
+3 info using node@v0.8.2
+4 verbose config file /Users/Hunter/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose read json /usr/local/lib/package.json
+8 verbose read json /usr/local/lib/package.json
+9 verbose cache add [ 'ldapjs', null ]
+10 silly cache add name=undefined spec="ldapjs" args=["ldapjs",null]
+11 verbose parsed url { pathname: 'ldapjs', path: 'ldapjs', href: 'ldapjs' }
+12 silly lockFile c5b1bf36-ldapjs ldapjs
+13 verbose lock ldapjs /Users/Hunter/.npm/c5b1bf36-ldapjs.lock
+14 silly lockFile c5b1bf36-ldapjs ldapjs
+15 verbose addNamed [ 'ldapjs', '' ]
+16 verbose addNamed [ null, '' ]
+17 silly lockFile 8c1a39b8-ldapjs ldapjs@
+18 verbose lock ldapjs@ /Users/Hunter/.npm/8c1a39b8-ldapjs.lock
+19 silly addNameRange { name: 'ldapjs', range: '', hasData: false }
+20 verbose url raw ldapjs
+21 verbose url resolving [ 'https://registry.npmjs.org/', './ldapjs' ]
+22 verbose url resolved https://registry.npmjs.org/ldapjs
+23 info retry registry request attempt 1 at 15:49:44
+24 verbose etag "7M2QL3KKCU7Y1STNIE3N8JL1J"
+25 http GET https://registry.npmjs.org/ldapjs
+26 http 304 https://registry.npmjs.org/ldapjs
+27 silly registry.get cb [ 304,
+27 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+27 silly registry.get     etag: '"7M2QL3KKCU7Y1STNIE3N8JL1J"',
+27 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:45 GMT',
+27 silly registry.get     'content-length': '0' } ]
+28 verbose etag ldapjs from cache
+29 silly addNameRange number 2 { name: 'ldapjs', range: '', hasData: true }
+30 silly addNameRange versions [ 'ldapjs',
+30 silly addNameRange   [ '0.1.0',
+30 silly addNameRange     '0.1.1',
+30 silly addNameRange     '0.1.2',
+30 silly addNameRange     '0.1.3',
+30 silly addNameRange     '0.1.4',
+30 silly addNameRange     '0.1.5',
+30 silly addNameRange     '0.1.6',
+30 silly addNameRange     '0.1.7',
+30 silly addNameRange     '0.1.8',
+30 silly addNameRange     '0.1.9',
+30 silly addNameRange     '0.2.0',
+30 silly addNameRange     '0.2.1',
+30 silly addNameRange     '0.2.2',
+30 silly addNameRange     '0.2.3',
+30 silly addNameRange     '0.2.4',
+30 silly addNameRange     '0.2.5',
+30 silly addNameRange     '0.2.6',
+30 silly addNameRange     '0.2.7',
+30 silly addNameRange     '0.2.8',
+30 silly addNameRange     '0.3.0',
+30 silly addNameRange     '0.3.1',
+30 silly addNameRange     '0.3.2',
+30 silly addNameRange     '0.3.3',
+30 silly addNameRange     '0.3.4',
+30 silly addNameRange     '0.3.5',
+30 silly addNameRange     '0.3.6',
+30 silly addNameRange     '0.4.0',
+30 silly addNameRange     '0.4.1',
+30 silly addNameRange     '0.4.2',
+30 silly addNameRange     '0.4.3',
+30 silly addNameRange     '0.4.4',
+30 silly addNameRange     '0.4.5',
+30 silly addNameRange     '0.4.6',
+30 silly addNameRange     '0.4.7',
+30 silly addNameRange     '0.4.8',
+30 silly addNameRange     '0.5.0',
+30 silly addNameRange     '0.5.1',
+30 silly addNameRange     '0.5.2',
+30 silly addNameRange     '0.5.3',
+30 silly addNameRange     '0.5.4' ] ]
+31 verbose addNamed [ 'ldapjs', '0.5.4' ]
+32 verbose addNamed [ '0.5.4', '0.5.4' ]
+33 silly lockFile fbedfda7-ldapjs-0-5-4 ldapjs@0.5.4
+34 verbose lock ldapjs@0.5.4 /Users/Hunter/.npm/fbedfda7-ldapjs-0-5-4.lock
+35 verbose read json /Users/Hunter/.npm/ldapjs/0.5.4/package/package.json
+36 silly lockFile fbedfda7-ldapjs-0-5-4 ldapjs@0.5.4
+37 silly lockFile 8c1a39b8-ldapjs ldapjs@
+38 silly resolved [ { author: { name: 'Mark Cavage', email: 'mcavage@gmail.com' },
+38 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+38 silly resolved     name: 'ldapjs',
+38 silly resolved     homepage: 'http://ldapjs.org',
+38 silly resolved     description: 'LDAP client and server APIs',
+38 silly resolved     version: '0.5.4',
+38 silly resolved     repository: { type: 'git', url: 'git://github.com/mcavage/node-ldapjs.git' },
+38 silly resolved     main: 'lib/index.js',
+38 silly resolved     directories: { bin: './bin', lib: './lib' },
+38 silly resolved     engines: { node: '>=0.6' },
+38 silly resolved     dependencies:
+38 silly resolved      { asn1: '0.1.11',
+38 silly resolved        'assert-plus': '0.1.0',
+38 silly resolved        buffertools: '1.1.0',
+38 silly resolved        bunyan: '0.10.0',
+38 silly resolved        'dtrace-provider': '0.0.9',
+38 silly resolved        nopt: '1.0.10',
+38 silly resolved        pooling: '0.2.2' },
+38 silly resolved     devDependencies: { tap: '0.2.5', 'node-uuid': '1.3.3' },
+38 silly resolved     scripts: { test: './node_modules/.bin/tap ./test' },
+38 silly resolved     bin:
+38 silly resolved      { 'ldapjs-add': 'bin/ldapjs-add',
+38 silly resolved        'ldapjs-compare': 'bin/ldapjs-compare',
+38 silly resolved        'ldapjs-delete': 'bin/ldapjs-delete',
+38 silly resolved        'ldapjs-modify': 'bin/ldapjs-modify',
+38 silly resolved        'ldapjs-search': 'bin/ldapjs-search' },
+38 silly resolved     readme: 'ldapjs makes the LDAP protocol a first class citizen in Node.js.\n\n## Usage\n\nFor full docs, head on over to <http://ldapjs.org>.\n\n    var ldap = require(\'ldapjs\');\n\n    var server = ldap.createServer();\n\n    server.search(\'dc=example\', function(req, res, next) {\n      var obj = {\n        dn: req.dn.toString(),\n        attributes: {\n          objectclass: [\'organization\', \'top\'],\n              o: \'example\'\n        }\n      };\n\n      if (req.filter.matches(obj.attributes))\n        res.send(obj);\n\n      res.end();\n    });\n\n    server.listen(1389, function() {\n      console.log(\'ldapjs listening at \' + server.url);\n    });\n\nTo run that, assuming you\'ve got the [OpenLDAP](http://www.openldap.org/) client\non your system:\n\n    ldapsearch -H ldap://localhost:1389 -x -b dc=example objectclass=*\n\n## Installation\n\n    npm install ldapjs\n\n## License\n\nMIT.\n\n## Bugs\n\nSee <https://github.com/mcavage/node-ldapjs/issues>.\n',
+38 silly resolved     _id: 'ldapjs@0.5.4',
+38 silly resolved     _from: 'ldapjs' } ]
+39 info install ldapjs@0.5.4 into /usr/local/lib
+40 info installOne ldapjs@0.5.4
+41 verbose from cache /Users/Hunter/.npm/ldapjs/0.5.4/package/package.json
+42 info /usr/local/lib/node_modules/ldapjs unbuild
+43 verbose read json /usr/local/lib/node_modules/ldapjs/package.json
+44 verbose tar unpack /Users/Hunter/.npm/ldapjs/0.5.4/package.tgz
+45 silly lockFile 67493052-sr-local-lib-node-modules-ldapjs /usr/local/lib/node_modules/ldapjs
+46 verbose lock /usr/local/lib/node_modules/ldapjs /Users/Hunter/.npm/67493052-sr-local-lib-node-modules-ldapjs.lock
+47 silly gunzTarPerm modes [ '755', '644' ]
+48 silly gunzTarPerm extractEntry package.json
+49 silly gunzTarPerm extractEntry .npmignore
+50 silly gunzTarPerm extractEntry README.md
+51 silly gunzTarPerm extractEntry LICENSE
+52 silly gunzTarPerm extractEntry bin/ldapjs-add
+53 silly gunzTarPerm extractEntry bin/ldapjs-compare
+54 silly gunzTarPerm extractEntry bin/ldapjs-delete
+55 silly gunzTarPerm extractEntry bin/ldapjs-modify
+56 silly gunzTarPerm extractEntry bin/ldapjs-search
+57 silly gunzTarPerm extractEntry docs/branding/footer.html.in
+58 silly gunzTarPerm extractEntry docs/branding/header.html.in
+59 silly gunzTarPerm extractEntry docs/branding/media/css/style.css
+60 silly gunzTarPerm extractEntry docs/branding/media/js/jquery-1.4.2.min.js
+61 silly gunzTarPerm extractEntry docs/client.md
+62 silly gunzTarPerm extractEntry docs/dn.md
+63 silly gunzTarPerm extractEntry docs/errors.md
+64 silly gunzTarPerm extractEntry docs/examples.md
+65 silly gunzTarPerm extractEntry docs/filters.md
+66 silly gunzTarPerm extractEntry docs/guide.md
+67 silly gunzTarPerm extractEntry docs/index.md
+68 silly gunzTarPerm extractEntry docs/persistent_search.md
+69 silly gunzTarPerm extractEntry docs/server.md
+70 silly gunzTarPerm extractEntry examples/inmemory.js
+71 silly gunzTarPerm extractEntry examples/pooled_client.js
+72 silly gunzTarPerm extractEntry examples/snoopldap.d
+73 silly gunzTarPerm extractEntry lib/attribute.js
+74 silly gunzTarPerm extractEntry lib/server.js
+75 silly gunzTarPerm extractEntry lib/protocol.js
+76 silly gunzTarPerm extractEntry lib/dn.js
+77 silly gunzTarPerm extractEntry lib/dtrace.js
+78 silly gunzTarPerm extractEntry lib/persistent_search.js
+79 silly gunzTarPerm extractEntry lib/change.js
+80 silly gunzTarPerm extractEntry lib/index.js
+81 silly gunzTarPerm extractEntry lib/url.js
+82 silly gunzTarPerm extractEntry lib/messages/abandon_request.js
+83 silly gunzTarPerm extractEntry lib/messages/del_response.js
+84 silly gunzTarPerm extractEntry lib/messages/ext_request.js
+85 silly gunzTarPerm extractEntry lib/messages/ext_response.js
+86 silly gunzTarPerm extractEntry lib/messages/index.js
+87 silly gunzTarPerm extractEntry lib/messages/del_request.js
+88 silly gunzTarPerm extractEntry lib/messages/moddn_request.js
+89 silly gunzTarPerm extractEntry lib/messages/moddn_response.js
+90 silly gunzTarPerm extractEntry lib/messages/modify_request.js
+91 silly gunzTarPerm extractEntry lib/messages/modify_response.js
+92 silly gunzTarPerm extractEntry lib/messages/parser.js
+93 silly gunzTarPerm extractEntry lib/messages/compare_response.js
+94 silly gunzTarPerm extractEntry lib/messages/result.js
+95 silly gunzTarPerm extractEntry lib/messages/compare_request.js
+96 silly gunzTarPerm extractEntry lib/messages/search_entry.js
+97 silly gunzTarPerm extractEntry lib/messages/bind_response.js
+98 silly gunzTarPerm extractEntry lib/messages/search_reference.js
+99 silly gunzTarPerm extractEntry lib/messages/bind_request.js
+100 silly gunzTarPerm extractEntry lib/messages/search_request.js
+101 silly gunzTarPerm extractEntry lib/messages/add_response.js
+102 silly gunzTarPerm extractEntry lib/messages/search_response.js
+103 silly gunzTarPerm extractEntry lib/messages/add_request.js
+104 silly gunzTarPerm extractEntry lib/messages/unbind_request.js
+105 silly gunzTarPerm extractEntry lib/messages/abandon_response.js
+106 silly gunzTarPerm extractEntry lib/messages/unbind_response.js
+107 silly gunzTarPerm extractEntry lib/messages/message.js
+108 silly gunzTarPerm extractEntry lib/errors/index.js
+109 silly gunzTarPerm extractEntry lib/controls/control.js
+110 silly gunzTarPerm extractEntry lib/controls/entry_change_notification_control.js
+111 silly gunzTarPerm extractEntry lib/controls/index.js
+112 silly gunzTarPerm extractEntry lib/controls/paged_results_control.js
+113 silly gunzTarPerm extractEntry lib/controls/persistent_search_control.js
+114 silly gunzTarPerm extractEntry lib/client/client.js
+115 silly gunzTarPerm extractEntry lib/client/index.js
+116 silly gunzTarPerm extractEntry lib/client/pool.js
+117 silly gunzTarPerm extractEntry lib/filters/and_filter.js
+118 silly gunzTarPerm extractEntry lib/filters/escape.js
+119 silly gunzTarPerm extractEntry lib/filters/ext_filter.js
+120 silly gunzTarPerm extractEntry lib/filters/filter.js
+121 silly gunzTarPerm extractEntry lib/filters/equality_filter.js
+122 silly gunzTarPerm extractEntry lib/filters/index.js
+123 silly gunzTarPerm extractEntry lib/filters/le_filter.js
+124 silly gunzTarPerm extractEntry lib/filters/not_filter.js
+125 silly gunzTarPerm extractEntry lib/filters/or_filter.js
+126 silly gunzTarPerm extractEntry lib/filters/presence_filter.js
+127 silly gunzTarPerm extractEntry lib/filters/approx_filter.js
+128 silly gunzTarPerm extractEntry lib/filters/substr_filter.js
+129 silly gunzTarPerm extractEntry lib/filters/ge_filter.js
+130 silly gunzTarPerm extractEntry .gitmodules
+131 silly gunzTarPerm extractEntry Makefile
+132 silly gunzTarPerm extractEntry Makefile.deps
+133 silly gunzTarPerm extractEntry Makefile.targ
+134 silly gunzTarPerm extractEntry .dir-locals.el
+135 silly gunzTarPerm extractEntry .travis.yml
+136 silly gunzTarPerm extractEntry test/attribute.test.js
+137 silly gunzTarPerm extractEntry test/change.test.js
+138 silly gunzTarPerm extractEntry test/client.test.js
+139 silly gunzTarPerm extractEntry test/dn.test.js
+140 silly gunzTarPerm extractEntry test/laundry.test.js
+141 silly gunzTarPerm extractEntry test/url.test.js
+142 silly gunzTarPerm extractEntry test/controls/control.test.js
+143 silly gunzTarPerm extractEntry test/controls/entry_change_notification_control_test.js
+144 silly gunzTarPerm extractEntry test/controls/paged_results_control_test.js
+145 silly gunzTarPerm extractEntry test/controls/persistent_search_control.test.js
+146 silly gunzTarPerm extractEntry test/filters/and.test.js
+147 silly gunzTarPerm extractEntry test/filters/eq.test.js
+148 silly gunzTarPerm extractEntry test/filters/ext.test.js
+149 silly gunzTarPerm extractEntry test/filters/ge.test.js
+150 silly gunzTarPerm extractEntry test/filters/approx.test.js
+151 silly gunzTarPerm extractEntry test/filters/not.test.js
+152 silly gunzTarPerm extractEntry test/filters/or.test.js
+153 silly gunzTarPerm extractEntry test/filters/parse.test.js
+154 silly gunzTarPerm extractEntry test/filters/presence.test.js
+155 silly gunzTarPerm extractEntry test/filters/substr.test.js
+156 silly gunzTarPerm extractEntry test/filters/le.test.js
+157 silly gunzTarPerm extractEntry test/messages/add_request.test.js
+158 silly gunzTarPerm extractEntry test/messages/compare_response.test.js
+159 silly gunzTarPerm extractEntry test/messages/del_request.test.js
+160 silly gunzTarPerm extractEntry test/messages/del_response.test.js
+161 silly gunzTarPerm extractEntry test/messages/ext_request.test.js
+162 silly gunzTarPerm extractEntry test/messages/compare_request.test.js
+163 silly gunzTarPerm extractEntry test/messages/moddn_request.test.js
+164 silly gunzTarPerm extractEntry test/messages/moddn_response.test.js
+165 silly gunzTarPerm extractEntry test/messages/modify_request.test.js
+166 silly gunzTarPerm extractEntry test/messages/modify_response.test.js
+167 silly gunzTarPerm extractEntry test/messages/search_entry.test.js
+168 silly gunzTarPerm extractEntry test/messages/bind_response.test.js
+169 silly gunzTarPerm extractEntry test/messages/search_request.test.js
+170 silly gunzTarPerm extractEntry test/messages/bind_request.test.js
+171 silly gunzTarPerm extractEntry test/messages/search_response.test.js
+172 silly gunzTarPerm extractEntry test/messages/add_response.test.js
+173 silly gunzTarPerm extractEntry test/messages/unbind_request.test.js
+174 silly gunzTarPerm extractEntry test/messages/ext_response.test.js
+175 silly gunzTarPerm extractEntry tools/jsl.node.conf
+176 silly gunzTarPerm extractEntry tools/jsstyle.conf
+177 verbose read json /usr/local/lib/node_modules/ldapjs/package.json
+178 silly lockFile 67493052-sr-local-lib-node-modules-ldapjs /usr/local/lib/node_modules/ldapjs
+179 info preinstall ldapjs@0.5.4
+180 verbose from cache /usr/local/lib/node_modules/ldapjs/package.json
+181 verbose readDependencies using package.json deps
+182 verbose from cache /usr/local/lib/node_modules/ldapjs/package.json
+183 verbose readDependencies using package.json deps
+184 verbose cache add [ 'asn1@0.1.11', null ]
+185 silly cache add name=undefined spec="asn1@0.1.11" args=["asn1@0.1.11",null]
+186 verbose parsed url { pathname: 'asn1@0.1.11',
+186 verbose parsed url   path: 'asn1@0.1.11',
+186 verbose parsed url   href: 'asn1@0.1.11' }
+187 silly cache add name="asn1" spec="0.1.11" args=["asn1","0.1.11"]
+188 verbose parsed url { pathname: '0.1.11', path: '0.1.11', href: '0.1.11' }
+189 verbose addNamed [ 'asn1', '0.1.11' ]
+190 verbose addNamed [ '0.1.11', '0.1.11' ]
+191 silly lockFile 41ecb821-asn1-0-1-11 asn1@0.1.11
+192 verbose lock asn1@0.1.11 /Users/Hunter/.npm/41ecb821-asn1-0-1-11.lock
+193 verbose cache add [ 'assert-plus@0.1.0', null ]
+194 silly cache add name=undefined spec="assert-plus@0.1.0" args=["assert-plus@0.1.0",null]
+195 verbose parsed url { pathname: 'assert-plus@0.1.0',
+195 verbose parsed url   path: 'assert-plus@0.1.0',
+195 verbose parsed url   href: 'assert-plus@0.1.0' }
+196 silly cache add name="assert-plus" spec="0.1.0" args=["assert-plus","0.1.0"]
+197 verbose parsed url { pathname: '0.1.0', path: '0.1.0', href: '0.1.0' }
+198 verbose addNamed [ 'assert-plus', '0.1.0' ]
+199 verbose addNamed [ '0.1.0', '0.1.0' ]
+200 silly lockFile ece6c34f-assert-plus-0-1-0 assert-plus@0.1.0
+201 verbose lock assert-plus@0.1.0 /Users/Hunter/.npm/ece6c34f-assert-plus-0-1-0.lock
+202 verbose cache add [ 'buffertools@1.1.0', null ]
+203 silly cache add name=undefined spec="buffertools@1.1.0" args=["buffertools@1.1.0",null]
+204 verbose parsed url { pathname: 'buffertools@1.1.0',
+204 verbose parsed url   path: 'buffertools@1.1.0',
+204 verbose parsed url   href: 'buffertools@1.1.0' }
+205 silly cache add name="buffertools" spec="1.1.0" args=["buffertools","1.1.0"]
+206 verbose parsed url { pathname: '1.1.0', path: '1.1.0', href: '1.1.0' }
+207 verbose addNamed [ 'buffertools', '1.1.0' ]
+208 verbose addNamed [ '1.1.0', '1.1.0' ]
+209 silly lockFile 2038c422-buffertools-1-1-0 buffertools@1.1.0
+210 verbose lock buffertools@1.1.0 /Users/Hunter/.npm/2038c422-buffertools-1-1-0.lock
+211 verbose cache add [ 'bunyan@0.10.0', null ]
+212 silly cache add name=undefined spec="bunyan@0.10.0" args=["bunyan@0.10.0",null]
+213 verbose parsed url { pathname: 'bunyan@0.10.0',
+213 verbose parsed url   path: 'bunyan@0.10.0',
+213 verbose parsed url   href: 'bunyan@0.10.0' }
+214 silly cache add name="bunyan" spec="0.10.0" args=["bunyan","0.10.0"]
+215 verbose parsed url { pathname: '0.10.0', path: '0.10.0', href: '0.10.0' }
+216 verbose addNamed [ 'bunyan', '0.10.0' ]
+217 verbose addNamed [ '0.10.0', '0.10.0' ]
+218 silly lockFile fc7872fc-bunyan-0-10-0 bunyan@0.10.0
+219 verbose lock bunyan@0.10.0 /Users/Hunter/.npm/fc7872fc-bunyan-0-10-0.lock
+220 verbose cache add [ 'dtrace-provider@0.0.9', null ]
+221 silly cache add name=undefined spec="dtrace-provider@0.0.9" args=["dtrace-provider@0.0.9",null]
+222 verbose parsed url { pathname: 'dtrace-provider@0.0.9',
+222 verbose parsed url   path: 'dtrace-provider@0.0.9',
+222 verbose parsed url   href: 'dtrace-provider@0.0.9' }
+223 silly cache add name="dtrace-provider" spec="0.0.9" args=["dtrace-provider","0.0.9"]
+224 verbose parsed url { pathname: '0.0.9', path: '0.0.9', href: '0.0.9' }
+225 verbose addNamed [ 'dtrace-provider', '0.0.9' ]
+226 verbose addNamed [ '0.0.9', '0.0.9' ]
+227 silly lockFile ad88525e-dtrace-provider-0-0-9 dtrace-provider@0.0.9
+228 verbose lock dtrace-provider@0.0.9 /Users/Hunter/.npm/ad88525e-dtrace-provider-0-0-9.lock
+229 verbose cache add [ 'nopt@1.0.10', null ]
+230 silly cache add name=undefined spec="nopt@1.0.10" args=["nopt@1.0.10",null]
+231 verbose parsed url { pathname: 'nopt@1.0.10',
+231 verbose parsed url   path: 'nopt@1.0.10',
+231 verbose parsed url   href: 'nopt@1.0.10' }
+232 silly cache add name="nopt" spec="1.0.10" args=["nopt","1.0.10"]
+233 verbose parsed url { pathname: '1.0.10', path: '1.0.10', href: '1.0.10' }
+234 verbose addNamed [ 'nopt', '1.0.10' ]
+235 verbose addNamed [ '1.0.10', '1.0.10' ]
+236 silly lockFile 1be903a1-nopt-1-0-10 nopt@1.0.10
+237 verbose lock nopt@1.0.10 /Users/Hunter/.npm/1be903a1-nopt-1-0-10.lock
+238 verbose cache add [ 'pooling@0.2.2', null ]
+239 silly cache add name=undefined spec="pooling@0.2.2" args=["pooling@0.2.2",null]
+240 verbose parsed url { pathname: 'pooling@0.2.2',
+240 verbose parsed url   path: 'pooling@0.2.2',
+240 verbose parsed url   href: 'pooling@0.2.2' }
+241 silly cache add name="pooling" spec="0.2.2" args=["pooling","0.2.2"]
+242 verbose parsed url { pathname: '0.2.2', path: '0.2.2', href: '0.2.2' }
+243 verbose addNamed [ 'pooling', '0.2.2' ]
+244 verbose addNamed [ '0.2.2', '0.2.2' ]
+245 silly lockFile a3b91f8b-pooling-0-2-2 pooling@0.2.2
+246 verbose lock pooling@0.2.2 /Users/Hunter/.npm/a3b91f8b-pooling-0-2-2.lock
+247 verbose url raw asn1/0.1.11
+248 verbose url resolving [ 'https://registry.npmjs.org/', './asn1/0.1.11' ]
+249 verbose url resolved https://registry.npmjs.org/asn1/0.1.11
+250 info retry registry request attempt 1 at 15:49:45
+251 verbose etag "VIID4XKWJV04MWZ5XM6EA26E"
+252 http GET https://registry.npmjs.org/asn1/0.1.11
+253 verbose url raw assert-plus/0.1.0
+254 verbose url resolving [ 'https://registry.npmjs.org/', './assert-plus/0.1.0' ]
+255 verbose url resolved https://registry.npmjs.org/assert-plus/0.1.0
+256 info retry registry request attempt 1 at 15:49:45
+257 verbose etag "90EI17U5NG2PPBFFVR35I6VE8"
+258 http GET https://registry.npmjs.org/assert-plus/0.1.0
+259 verbose url raw buffertools/1.1.0
+260 verbose url resolving [ 'https://registry.npmjs.org/', './buffertools/1.1.0' ]
+261 verbose url resolved https://registry.npmjs.org/buffertools/1.1.0
+262 info retry registry request attempt 1 at 15:49:45
+263 verbose etag "EYDQH2G5YVMFNY96PTYVDIFTR"
+264 http GET https://registry.npmjs.org/buffertools/1.1.0
+265 verbose url raw bunyan/0.10.0
+266 verbose url resolving [ 'https://registry.npmjs.org/', './bunyan/0.10.0' ]
+267 verbose url resolved https://registry.npmjs.org/bunyan/0.10.0
+268 info retry registry request attempt 1 at 15:49:45
+269 verbose etag "HG7MSO8Z1B8437U5JRM86A1Q"
+270 http GET https://registry.npmjs.org/bunyan/0.10.0
+271 verbose url raw dtrace-provider/0.0.9
+272 verbose url resolving [ 'https://registry.npmjs.org/', './dtrace-provider/0.0.9' ]
+273 verbose url resolved https://registry.npmjs.org/dtrace-provider/0.0.9
+274 info retry registry request attempt 1 at 15:49:45
+275 verbose etag "CQ1LQQ9OBF30KL9HOZHSYGT80"
+276 http GET https://registry.npmjs.org/dtrace-provider/0.0.9
+277 verbose url raw nopt/1.0.10
+278 verbose url resolving [ 'https://registry.npmjs.org/', './nopt/1.0.10' ]
+279 verbose url resolved https://registry.npmjs.org/nopt/1.0.10
+280 info retry registry request attempt 1 at 15:49:45
+281 verbose etag "AANXQI9E0IOFI1MLGAR8J06GJ"
+282 http GET https://registry.npmjs.org/nopt/1.0.10
+283 verbose url raw pooling/0.2.2
+284 verbose url resolving [ 'https://registry.npmjs.org/', './pooling/0.2.2' ]
+285 verbose url resolved https://registry.npmjs.org/pooling/0.2.2
+286 info retry registry request attempt 1 at 15:49:45
+287 verbose etag "EEIH0QBRWEZDSZNE1LSJMCMJB"
+288 http GET https://registry.npmjs.org/pooling/0.2.2
+289 http 304 https://registry.npmjs.org/asn1/0.1.11
+290 silly registry.get cb [ 304,
+290 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+290 silly registry.get     etag: '"VIID4XKWJV04MWZ5XM6EA26E"',
+290 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:45 GMT',
+290 silly registry.get     'content-length': '0' } ]
+291 verbose etag asn1/0.1.11 from cache
+292 verbose read json /Users/Hunter/.npm/asn1/0.1.11/package/package.json
+293 silly lockFile 41ecb821-asn1-0-1-11 asn1@0.1.11
+294 http 304 https://registry.npmjs.org/nopt/1.0.10
+295 silly registry.get cb [ 304,
+295 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+295 silly registry.get     etag: '"AANXQI9E0IOFI1MLGAR8J06GJ"',
+295 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:45 GMT',
+295 silly registry.get     'content-length': '0' } ]
+296 verbose etag nopt/1.0.10 from cache
+297 http 304 https://registry.npmjs.org/bunyan/0.10.0
+298 silly registry.get cb [ 304,
+298 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+298 silly registry.get     etag: '"HG7MSO8Z1B8437U5JRM86A1Q"',
+298 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:45 GMT',
+298 silly registry.get     'content-length': '0' } ]
+299 verbose etag bunyan/0.10.0 from cache
+300 http 304 https://registry.npmjs.org/buffertools/1.1.0
+301 silly registry.get cb [ 304,
+301 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+301 silly registry.get     etag: '"EYDQH2G5YVMFNY96PTYVDIFTR"',
+301 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:45 GMT',
+301 silly registry.get     'content-length': '0' } ]
+302 verbose etag buffertools/1.1.0 from cache
+303 http 304 https://registry.npmjs.org/assert-plus/0.1.0
+304 silly registry.get cb [ 304,
+304 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+304 silly registry.get     etag: '"90EI17U5NG2PPBFFVR35I6VE8"',
+304 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:45 GMT',
+304 silly registry.get     'content-length': '0' } ]
+305 verbose etag assert-plus/0.1.0 from cache
+306 http 304 https://registry.npmjs.org/dtrace-provider/0.0.9
+307 silly registry.get cb [ 304,
+307 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+307 silly registry.get     etag: '"CQ1LQQ9OBF30KL9HOZHSYGT80"',
+307 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:45 GMT',
+307 silly registry.get     'content-length': '0' } ]
+308 verbose etag dtrace-provider/0.0.9 from cache
+309 verbose read json /Users/Hunter/.npm/nopt/1.0.10/package/package.json
+310 verbose read json /Users/Hunter/.npm/bunyan/0.10.0/package/package.json
+311 verbose read json /Users/Hunter/.npm/buffertools/1.1.0/package/package.json
+312 verbose read json /Users/Hunter/.npm/assert-plus/0.1.0/package/package.json
+313 silly lockFile 1be903a1-nopt-1-0-10 nopt@1.0.10
+314 verbose read json /Users/Hunter/.npm/dtrace-provider/0.0.9/package/package.json
+315 silly lockFile fc7872fc-bunyan-0-10-0 bunyan@0.10.0
+316 http 304 https://registry.npmjs.org/pooling/0.2.2
+317 silly registry.get cb [ 304,
+317 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+317 silly registry.get     etag: '"EEIH0QBRWEZDSZNE1LSJMCMJB"',
+317 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:45 GMT',
+317 silly registry.get     'content-length': '0' } ]
+318 verbose etag pooling/0.2.2 from cache
+319 silly lockFile ece6c34f-assert-plus-0-1-0 assert-plus@0.1.0
+320 verbose read json /Users/Hunter/.npm/pooling/0.2.2/package/package.json
+321 silly lockFile ad88525e-dtrace-provider-0-0-9 dtrace-provider@0.0.9
+322 silly lockFile 2038c422-buffertools-1-1-0 buffertools@1.1.0
+323 silly lockFile a3b91f8b-pooling-0-2-2 pooling@0.2.2
+324 silly resolved [ { author: { name: 'Mark Cavage', email: 'mcavage@gmail.com' },
+324 silly resolved     contributors: [ [Object], [Object] ],
+324 silly resolved     name: 'asn1',
+324 silly resolved     description: 'Contains parsers and serializers for ASN.1 (currently BER only)',
+324 silly resolved     version: '0.1.11',
+324 silly resolved     repository: { type: 'git', url: 'git://github.com/mcavage/node-asn1.git' },
+324 silly resolved     main: 'lib/index.js',
+324 silly resolved     engines: { node: '>=0.4.9' },
+324 silly resolved     dependencies: {},
+324 silly resolved     devDependencies: { tap: '0.1.4' },
+324 silly resolved     scripts:
+324 silly resolved      { pretest: 'which gjslint; if [[ "$?" = 0 ]] ; then  gjslint --nojsdoc -r lib -r tst; else echo "Missing gjslint. Skipping lint"; fi',
+324 silly resolved        test: './node_modules/.bin/tap ./tst' },
+324 silly resolved     readme: 'node-asn1 is a library for encoding and decoding ASN.1 datatypes in pure JS.\nCurrently BER encoding is supported; at some point I\'ll likely have to do DER.\n\n## Usage\n\nMostly, if you\'re *actually* needing to read and write ASN.1, you probably don\'t\nneed this readme to explain what and why.  If you have no idea what ASN.1 is,\nsee this: ftp://ftp.rsa.com/pub/pkcs/ascii/layman.asc\n\nThe source is pretty much self-explanatory, and has read/write methods for the\ncommon types out there.\n\n### Decoding\n\nThe following reads an ASN.1 sequence with a boolean.\n\n    var Ber = require(\'asn1\').Ber;\n\n    var reader = new Ber.Reader(new Buffer([0x30, 0x03, 0x01, 0x01, 0xff]));\n\n    reader.readSequence();\n    console.log(\'Sequence len: \' + reader.length);\n    if (reader.peek() === Ber.Boolean)\n      console.log(reader.readBoolean());\n\n### Encoding\n\nThe following generates the same payload as above.\n\n    var Ber = require(\'asn1\').Ber;\n\n    var writer = new Ber.Writer();\n\n    writer.startSequence();\n    writer.writeBoolean(true);\n    writer.endSequence();\n\n    console.log(writer.buffer);\n\n## Installation\n\n    npm install asn1\n\n## License\n\nMIT.\n\n## Bugs\n\nSee <https://github.com/mcavage/node-asn1/issues>.\n',
+324 silly resolved     _id: 'asn1@0.1.11',
+324 silly resolved     _from: 'asn1@0.1.11' },
+324 silly resolved   { name: 'nopt',
+324 silly resolved     version: '1.0.10',
+324 silly resolved     description: 'Option parsing for Node, supporting types, shorthands, etc. Used by npm.',
+324 silly resolved     author:
+324 silly resolved      { name: 'Isaac Z. Schlueter',
+324 silly resolved        email: 'i@izs.me',
+324 silly resolved        url: 'http://blog.izs.me/' },
+324 silly resolved     main: 'lib/nopt.js',
+324 silly resolved     scripts: { test: 'node lib/nopt.js' },
+324 silly resolved     repository: { type: 'git', url: 'http://github.com/isaacs/nopt' },
+324 silly resolved     bin: { nopt: './bin/nopt.js' },
+324 silly resolved     license:
+324 silly resolved      { type: 'MIT',
+324 silly resolved        url: 'https://github.com/isaacs/nopt/raw/master/LICENSE' },
+324 silly resolved     dependencies: { abbrev: '1' },
+324 silly resolved     readme: 'If you want to write an option parser, and have it be good, there are\ntwo ways to do it.  The Right Way, and the Wrong Way.\n\nThe Wrong Way is to sit down and write an option parser.  We\'ve all done\nthat.\n\nThe Right Way is to write some complex configurable program with so many\noptions that you go half-insane just trying to manage them all, and put\nit off with duct-tape solutions until you see exactly to the core of the\nproblem, and finally snap and write an awesome option parser.\n\nIf you want to write an option parser, don\'t write an option parser.\nWrite a package manager, or a source control system, or a service\nrestarter, or an operating system.  You probably won\'t end up with a\ngood one of those, but if you don\'t give up, and you are relentless and\ndiligent enough in your procrastination, you may just end up with a very\nnice option parser.\n\n## USAGE\n\n    // my-program.js\n    var nopt = require("nopt")\n      , Stream = require("stream").Stream\n      , path = require("path")\n      , knownOpts = { "foo" : [String, null]\n                    , "bar" : [Stream, Number]\n                    , "baz" : path\n                    , "bloo" : [ "big", "medium", "small" ]\n                    , "flag" : Boolean\n                    , "pick" : Boolean\n                    , "many" : [String, Array]\n                    }\n      , shortHands = { "foofoo" : ["--foo", "Mr. Foo"]\n                     , "b7" : ["--bar", "7"]\n                     , "m" : ["--bloo", "medium"]\n                     , "p" : ["--pick"]\n                     , "f" : ["--flag"]\n                     }\n                 // everything is optional.\n                 // knownOpts and shorthands default to {}\n                 // arg list defaults to process.argv\n                 // slice defaults to 2\n      , parsed = nopt(knownOpts, shortHands, process.argv, 2)\n    console.log(parsed)\n\nThis would give you support for any of the following:\n\n```bash\n$ node my-program.js --foo "blerp" --no-flag\n{ "foo" : "blerp", "flag" : false }\n\n$ node my-program.js ---bar 7 --foo "Mr. Hand" --flag\n{ bar: 7, foo: "Mr. Hand", flag: true }\n\n$ node my-program.js --foo "blerp" -f -----p\n{ foo: "blerp", flag: true, pick: true }\n\n$ node my-program.js -fp --foofoo\n{ foo: "Mr. Foo", flag: true, pick: true }\n\n$ node my-program.js --foofoo -- -fp  # -- stops the flag parsing.\n{ foo: "Mr. Foo", argv: { remain: ["-fp"] } }\n\n$ node my-program.js --blatzk 1000 -fp # unknown opts are ok.\n{ blatzk: 1000, flag: true, pick: true }\n\n$ node my-program.js --blatzk true -fp # but they need a value\n{ blatzk: true, flag: true, pick: true }\n\n$ node my-program.js --no-blatzk -fp # unless they start with "no-"\n{ blatzk: false, flag: true, pick: true }\n\n$ node my-program.js --baz b/a/z # known paths are resolved.\n{ baz: "/Users/isaacs/b/a/z" }\n\n# if Array is one of the types, then it can take many\n# values, and will always be an array.  The other types provided\n# specify what types are allowed in the list.\n\n$ node my-program.js --many 1 --many null --many foo\n{ many: ["1", "null", "foo"] }\n\n$ node my-program.js --many foo\n{ many: ["foo"] }\n```\n\nRead the tests at the bottom of `lib/nopt.js` for more examples of\nwhat this puppy can do.\n\n## Types\n\nThe following types are supported, and defined on `nopt.typeDefs`\n\n* String: A normal string.  No parsing is done.\n* path: A file system path.  Gets resolved against cwd if not absolute.\n* url: A url.  If it doesn\'t parse, it isn\'t accepted.\n* Number: Must be numeric.\n* Date: Must parse as a date. If it does, and `Date` is one of the options,\n  then it will return a Date object, not a string.\n* Boolean: Must be either `true` or `false`.  If an option is a boolean,\n  then it does not need a value, and its presence will imply `true` as\n  the value.  To negate boolean flags, do `--no-whatever` or `--whatever\n  false`\n* NaN: Means that the option is strictly not allowed.  Any value will\n  fail.\n* Stream: An object matching the "Stream" class in node.  Valuable\n  for use when validating programmatically.  (npm uses this to let you\n  supply any WriteStream on the `outfd` and `logfd` config options.)\n* Array: If `Array` is specified as one of the types, then the value\n  will be parsed as a list of options.  This means that multiple values\n  can be specified, and that the value will always be an array.\n\nIf a type is an array of values not on this list, then those are\nconsidered valid values.  For instance, in the example above, the\n`--bloo` option can only be one of `"big"`, `"medium"`, or `"small"`,\nand any other value will be rejected.\n\nWhen parsing unknown fields, `"true"`, `"false"`, and `"null"` will be\ninterpreted as their JavaScript equivalents, and numeric values will be\ninterpreted as a number.\n\nYou can also mix types and values, or multiple types, in a list.  For\ninstance `{ blah: [Number, null] }` would allow a value to be set to\neither a Number or null.\n\nTo define a new type, add it to `nopt.typeDefs`.  Each item in that\nhash is an object with a `type` member and a `validate` method.  The\n`type` member is an object that matches what goes in the type list.  The\n`validate` method is a function that gets called with `validate(data,\nkey, val)`.  Validate methods should assign `data[key]` to the valid\nvalue of `val` if it can be handled properly, or return boolean\n`false` if it cannot.\n\nYou can also call `nopt.clean(data, types, typeDefs)` to clean up a\nconfig object and remove its invalid properties.\n\n## Error Handling\n\nBy default, nopt outputs a warning to standard error when invalid\noptions are found.  You can change this behavior by assigning a method\nto `nopt.invalidHandler`.  This method will be called with\nthe offending `nopt.invalidHandler(key, val, types)`.\n\nIf no `nopt.invalidHandler` is assigned, then it will console.error\nits whining.  If it is assigned to boolean `false` then the warning is\nsuppressed.\n\n## Abbreviations\n\nYes, they are supported.  If you define options like this:\n\n```javascript\n{ "foolhardyelephants" : Boolean\n, "pileofmonkeys" : Boolean }\n```\n\nThen this will work:\n\n```bash\nnode program.js --foolhar --pil\nnode program.js --no-f --pileofmon\n# etc.\n```\n\n## Shorthands\n\nShorthands are a hash of shorter option names to a snippet of args that\nthey expand to.\n\nIf multiple one-character shorthands are all combined, and the\ncombination does not unambiguously match any other option or shorthand,\nthen they will be broken up into their constituent parts.  For example:\n\n```json\n{ "s" : ["--loglevel", "silent"]\n, "g" : "--global"\n, "f" : "--force"\n, "p" : "--parseable"\n, "l" : "--long"\n}\n```\n\n```bash\nnpm ls -sgflp\n# just like doing this:\nnpm ls --loglevel silent --global --force --long --parseable\n```\n\n## The Rest of the args\n\nThe config object returned by nopt is given a special member called\n`argv`, which is an object with the following fields:\n\n* `remain`: The remaining args after all the parsing has occurred.\n* `original`: The args as they originally appeared.\n* `cooked`: The args after flags and shorthands are expanded.\n\n## Slicing\n\nNode programs are called with more or less the exact argv as it appears\nin C land, after the v8 and node-specific options have been plucked off.\nAs such, `argv[0]` is always `node` and `argv[1]` is always the\nJavaScript program being run.\n\nThat\'s usually not very useful to you.  So they\'re sliced off by\ndefault.  If you want them, then you can pass in `0` as the last\nargument, or any other number that you\'d like to slice off the start of\nthe list.\n',
+324 silly resolved     _id: 'nopt@1.0.10',
+324 silly resolved     _from: 'nopt@1.0.10' },
+324 silly resolved   { name: 'bunyan',
+324 silly resolved     version: '0.10.0',
+324 silly resolved     description: 'a JSON Logger library for node.js services',
+324 silly resolved     author:
+324 silly resolved      { name: 'Trent Mick',
+324 silly resolved        email: 'trentm@gmail.com',
+324 silly resolved        url: 'http://trentm.com' },
+324 silly resolved     main: './lib/bunyan.js',
+324 silly resolved     bin: { bunyan: './bin/bunyan' },
+324 silly resolved     repository: { type: 'git', url: 'git://github.com/trentm/node-bunyan.git' },
+324 silly resolved     engines: [ 'node >=0.6.0' ],
+324 silly resolved     keywords: [ 'log', 'logging', 'log4j', 'json' ],
+324 silly resolved     devDependencies: { tap: '0.2.0', ben: '0.0.0' },
+324 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+324 silly resolved     readme: 'Bunyan is a simple and fast a JSON Logger for node.js services (and a `bunyan`\nCLI tool for nicely viewing those logs).\n\nServer logs should be structured. JSON\'s a good format. Let\'s do that: a log\nrecord is one line of `JSON.stringify`\'d output. Let\'s also specify some common\nnames for the requisite and common fields for a log record (see below).\n\nAlso: log4j is way more than you need.\n\n\n# Current Status\n\nSolid core functionality is there. Joyent is using this for a number of\nproduction services. Bunyan supports node 0.6 and greater.\n\nFollow <a href="https://twitter.com/intent/user?screen_name=trentmick" target="_blank">@trentmick</a>\nfor updates to Bunyan.\n\nSee also: [Bunyan for Bash](https://github.com/trevoro/bash-bunyan).\n\n\n# Installation\n\n    npm install bunyan\n\n\n# Usage\n\n**The usual.** All loggers must provide a "name". This is somewhat akin\nto log4j logger "name", but Bunyan doesn\'t do hierarchical logger names.\n\n    $ cat hi.js\n    var Logger = require(\'bunyan\');\n    var log = new Logger({name: "myapp"});\n    log.info("hi");\n\nAlternatively, bunyan 0.7.0 and up supports a more node.js-land typical\nstyle (which might become the preferred form over time):\n\n    var bunyan = require(\'bunyan\');\n    var log = bunyan.createLogger({name: "myapp"});\n\n**Log records are JSON.** "hostname", "time" and "v" (the Bunyan log\nformat version) are added for you.\n\n    $ node hi.js\n    {"name":"myapp","hostname":"banana.local","pid":123,"level":2,"msg":"hi","time":"2012-01-31T00:07:44.216Z","v":0}\n\nThe full `log.{trace|debug|...|fatal}(...)` API is:\n\n    log.info();     // Returns a boolean: is the "info" level enabled?\n\n    log.info(\'hi\');                     // Log a simple string message.\n    log.info(\'hi %s\', bob, anotherVar); // Uses `util.format` for msg formatting.\n\n    log.info({foo: \'bar\'}, \'hi\');       // Adds "foo" field to log record.\n\n    log.info(err);  // Special case to log an `Error` instance, adds "err"\n                    // key with exception details (including the stack) and\n                    // sets "msg" to the exception message.\n    log.info(err, \'more on this: %s\', more);\n                    // ... or you can specify the "msg".\n\nNote that this implies **you cannot pass any object as the first argument\nto log it**. IOW, `log.info(myobject)` isn\'t going to work the way you\nexpect. Adding support for this API would necessitate (a) JSON-ifying safely\nthat given object (sometimes hard, and probably slow) and (b) putting all its\nattribs under a top-level \'x\' field name or something to avoid field name\ncollisions.\n\n\n## bunyan tool\n\nA `bunyan` tool is provided **for pretty-printing bunyan logs** and, eventually,\nfor filtering (e.g. `| bunyan -c \'level>3\'`). This shows the default output\n(which is fluid right now) and indented-JSON output. More output formats will\nbe added, including support for custom formats.\n\n    $ node hi.js | ./bin/bunyan  # CLI tool to filter/pretty-print JSON logs.\n    [2012-01-31T00:08:11.387Z] INFO: myapp on banana.local/123: hi\n\n    $ node hi.js | ./bin/bunyan -o json\n    {\n      "name": "myapp",\n      "hostname": "banana.local",\n      "pid": 123,\n      "level": 2,\n      "msg": "hi",\n      "time": "2012-01-31T00:10:00.676Z",\n      "v": 0\n    }\n\n\n## streams\n\nBy default, log output is to stdout (**stream**) and at the "info" level.\nExplicitly that looks like:\n\n    var log = new Logger({name: "myapp", stream: process.stdout,\n      level: "info"});\n\nThat is an abbreviated form for a single stream. **You can defined multiple\nstreams at different levels**.\n\n    var log = new Logger({\n      name: "amon",\n      streams: [\n        {\n          level: "info",\n          stream: process.stdout, // log INFO and above to stdout\n        },\n        {\n          level: "error",\n          path: "tmp/error.log"   // log ERROR and above to a file\n        }\n      ]\n    });\n\nMore on streams in the "Streams" section below.\n\n\n## log.child\n\nA `log.child(...)` is provided to **specialize a logger for a sub-component**.\nThe following will have log records from "Wuzzle" instances use exactly the\nsame config as its parent, plus include the "component" field.\n\n    var log = new Logger(...);\n\n    ...\n\n    function Wuzzle(options) {\n      this.log = options.log;\n      this.log.info("creating a wuzzle")\n    }\n    Wuzzle.prototype.woos = function () {\n      this.log.warn("This wuzzle is woosey.")\n    }\n\n    var wuzzle = new Wuzzle({log: log.child({component: "wuzzle"})});\n    wuzzle.woos();\n    log.info("done with the wuzzle")\n\nThe [node-restify](https://github.com/mcavage/node-restify)\nframework integrates bunyan. One feature of its integration, is that each\nrestify request handler includes a `req.log` logger that is:\n\n    log.child({req_id: <unique request id>}, true)\n\nApps using restify can then use `req.log` and have all such log records\ninclude the unique request id (as "req_id"). Handy.\n\n\n## serializers\n\nBunyan has a concept of **"serializers" to produce a JSON-able object from a\nJavaScript object**, so you can easily do the following:\n\n    log.info({req: <request object>}, "something about handling this request");\n\nAssociation is by log record field name, "req" in this example, so this\nrequires a registered serializer something like this:\n\n    function reqSerializer(req) {\n      return {\n        method: req.method,\n        url: req.url,\n        headers: req.headers\n      }\n    }\n    var log = new Logger({\n      ...\n      serializers: {\n        req: reqSerializer\n      }\n    });\n\nOr this:\n\n    var log = new Logger({\n      ...\n      serializers: {req: Logger.stdSerializers.req}\n    });\n\nbecause Buyan includes a small set of standard serializers. To use all the\nstandard serializers you can use:\n\n    var log = new Logger({\n      ...\n      serializers: Logger.stdSerializers\n    });\n\n*Note: Your own serializers should never throw, otherwise you\'ll get an\nugly message on stderr from Bunyan (along with the traceback) and the field\nin your log record will be replaced with a short error message.*\n\n## src\n\nThe **source file, line and function of the log call site** can be added to\nlog records by using the `src: true` config option:\n\n    var log = new Logger({src: true, ...});\n\nThis adds the call source info with the \'src\' field, like this:\n\n    {\n      "name": "src-example",\n      "hostname": "banana.local",\n      "pid": 123,\n      "component": "wuzzle",\n      "level": 4,\n      "msg": "This wuzzle is woosey.",\n      "time": "2012-02-06T04:19:35.605Z",\n      "src": {\n        "file": "/Users/trentm/tm/node-bunyan/examples/src.js",\n        "line": 20,\n        "func": "Wuzzle.woos"\n      },\n      "v": 0\n    }\n\n**WARNING: Determining the call source info is slow. Never use this option\nin production.**\n\n\n# Levels\n\nThe log levels in bunyan are:\n\n- "fatal" (60): the service/app is going to stop or become unusable now\n- "error" (50): fatal for a particular request, but the service/app continues servicing other requests\n- "warn" (40): a note on something that should probably be looked at by an operator\n- "info" (30): detail on regular operation\n- "debug" (20): anything else, i.e. too verbose to be included in "info" level.\n- "trace" (10): logging from external libraries used by your app\n\nGeneral level usage suggestions: "debug" should be used sparingly.\nInformation that will be useful to debug errors *post mortem* should usually\nbe included in "info" messages if it\'s generally relevant or else with the\ncorresponding "error" event. Don\'t rely on spewing mostly irrelevant debug\nmessages all the time and sifting through them when an error occurs.\n\nIntegers are used for the actual level values (10 for "trace", ..., 60 for\n"fatal") and constants are defined for the (Logger.TRACE ... Logger.DEBUG).\nThe lowercase level names are aliases supported in the API.\n\nHere is the API for changing levels in an existing logger:\n\n    log.level() -> INFO   // gets current level (lowest level of all streams)\n\n    log.level(INFO)       // set all streams to level INFO\n    log.level("info")     // set all streams to level INFO\n\n    log.levels() -> [DEBUG, INFO]   // get array of levels of all streams\n    log.levels(0) -> DEBUG          // get level of stream at index 0\n    log.levels("foo")               // get level of stream with name "foo"\n\n    log.levels(0, INFO)             // set level of stream 0 to INFO\n    log.levels(0, "info")           // can use "info" et al aliases\n    log.levels("foo", WARN)         // set stream named "foo" to WARN\n\n\n\n# Log Record Fields\n\nThis section will describe *rules* for the Bunyan log format: field names,\nfield meanings, required fields, etc. However, a Bunyan library doesn\'t\nstrictly enforce all these rules while records are being emitted. For example,\nBunyan will add a `time` field with the correct format to your log records,\nbut you can specify your own. It is the caller\'s responsibility to specify\nthe appropriate format.\n\nThe reason for the above leniency is because IMO logging a message should\nnever break your app. This leads to this rule of logging: **a thrown\nexception from `log.info(...)` or equivalent (other than for calling with the\nincorrect signature) is always a bug in Bunyan.**\n\n\nA typical Bunyan log record looks like this:\n\n    {"name":"myserver","hostname":"banana.local","pid":123,"req":{"method":"GET","url":"/path?q=1#anchor","headers":{"x-hi":"Mom","connection":"close"}},"level":3,"msg":"start request","time":"2012-02-03T19:02:46.178Z","v":0}\n\nPretty-printed:\n\n    {\n      "name": "myserver",\n      "hostname": "banana.local",\n      "pid": 123,\n      "req": {\n        "method": "GET",\n        "url": "/path?q=1#anchor",\n        "headers": {\n          "x-hi": "Mom",\n          "connection": "close"\n        },\n        "remoteAddress": "120.0.0.1",\n        "remotePort": 51244\n      },\n      "level": 3,\n      "msg": "start request",\n      "time": "2012-02-03T19:02:57.534Z",\n      "v": 0\n    }\n\n\nCore fields:\n\n- `v`: Required. Integer. Added by Bunion. Cannot be overriden.\n  This is the Bunyan log format version (`require(\'bunyan\').LOG_VERSION`).\n  The log version is a single integer. `0` is until I release a version\n  "1.0.0" of node-bunyan. Thereafter, starting with `1`, this will be\n  incremented if there is any backward incompatible change to the log record\n  format. Details will be in "CHANGES.md" (the change log).\n- `level`: Required. Integer. Added by Bunion. Cannot be overriden.\n  See the "Levels" section.\n- `name`: Required. String. Provided at Logger creation.\n  You must specify a name for your logger when creating it. Typically this\n  is the name of the service/app using Bunyan for logging.\n- `hostname`: Required. String. Provided or determined at Logger creation.\n  You can specify your hostname at Logger creation or it will be retrieved\n  vi `os.hostname()`.\n- `pid`: Required. Integer. Filled in automatically at Logger creation.\n- `time`: Required. String. Added by Bunion. Can be overriden.\n  The date and time of the event in [ISO 8601\n  Extended Format](http://en.wikipedia.org/wiki/ISO_8601) format and in UTC,\n  as from\n  [`Date.toISOString()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date/toISOString).\n- `msg`: Required. String.\n  Every `log.debug(...)` et al call must provide a log message.\n- `src`: Optional. Object giving log call source info. This is added\n  automatically by Bunyan if the "src: true" config option is given to the\n  Logger. Never use in production as this is really slow.\n\n\nGo ahead and add more fields, and nest ones are fine (and recommended) as\nwell. This is why we\'re using JSON. Some suggestions and best practices\nfollow (feedback from actual users welcome).\n\n\nRecommended/Best Practice Fields:\n\n-   `err`: Object. A caught JS exception. Log that thing with `log.info(err)`\n    to get:\n\n        ...\n        "err": {\n          "message": "boom",\n          "name": "TypeError",\n          "stack": "TypeError: boom\\n    at Object.<anonymous> ..."\n        },\n        "msg": "boom",\n        ...\n\n    Or use the `Logger.stdSerializers.err` serializer in your Logger and\n    do this `log.error({err: err}, "oops")`. See "examples/err.js".\n\n- `req_id`: String. A request identifier. Including this field in all logging\n  tied to handling a particular request to your server is strongly suggested.\n  This allows post analysis of logs to easily collate all related logging\n  for a request. This really shines when you have a SOA with multiple services\n  and you carry a single request ID from the top API down through all APIs\n  (as [node-restify](https://github.com/mcavage/node-restify) facilitates\n  with its \'X-Request-Id\' header).\n\n- `req`: An HTTP server request. Bunyan provides `Logger.stdSerializers.req`\n  to serialize a request with a suggested set of keys. Example:\n\n        {\n          "method": "GET",\n          "url": "/path?q=1#anchor",\n          "headers": {\n            "x-hi": "Mom",\n            "connection": "close"\n          },\n          "remoteAddress": "120.0.0.1",\n          "remotePort": 51244\n        }\n\n- `res`: An HTTP server response. Bunyan provides `Logger.stdSerializers.res`\n  to serialize a response with a suggested set of keys. Example:\n\n        {\n          "statusCode": 200,\n          "header": "HTTP/1.1 200 OK\\r\\nContent-Type: text/plain\\r\\nConnection: keep-alive\\r\\nTransfer-Encoding: chunked\\r\\n\\r\\n"\n        }\n\n\nOther fields to consider:\n\n- `req.username`: Authenticated user (or for a 401, the user attempting to\n  auth).\n- Some mechanism to calculate response latency. "restify" users will have\n  a "X-Response-Time" header. A `latency` custom field would be fine.\n- `req.body`: If you know that request bodies are small (common in APIs,\n  for example), then logging the request body is good.\n\n\n# Streams\n\nA "stream" is Bunyan\'s name for an output for log messages (the equivalent\nto a log4j Appender). Ultimately Bunyan uses a\n[Writable Stream](http://nodejs.org/docs/latest/api/all.html#writable_Stream)\ninterface, but there are some additional attributes used to create and\nmanage the stream. A Bunyan Logger instance has one or more streams.\nIn general streams are specified with the "streams" option:\n\n    var Logger = require(\'bunyan\');\n    var log = new Logger({\n      name: "foo",\n      streams: [\n        {\n            stream: process.stderr,\n            level: "debug"\n        },\n        ...\n      ]\n    })\n\nFor convenience, if there is only one stream, it can specified with the\n"stream" and "level" options (internal converted to a `Logger.streams`):\n\n    var log = new Logger({\n      name: "foo",\n      stream: process.stderr,\n      level: "debug"\n    })\n\nIf none are specified, the default is a stream on `process.stdout` at the\n"info" level.\n\n`Logger.streams` is an array of stream objects with the following attributes:\n\n- `type`: One of "stream", "file" or "raw". See below. Often this is\n  implied from the other arguments.\n- `path`: A file path for a file stream. If `path` is given and `type` is\n  not specified, then `type` will be set to "file".\n- `stream`: This is the "Writable Stream", e.g. a std handle or an open\n  file write stream. If `stream` is given and `type` is not specified, then\n  `type` will be set to "stream".\n- `level`: The level at which logging to this stream is enabled. If not\n  specified it defaults to INFO.\n\nSupported stream types are:\n\n- `stream`: A plain ol\' node.js [Writable\n  Stream](http://nodejs.org/docs/latest/api/all.html#writable_Stream).\n  A "stream" (the writeable stream) value is required.\n\n- `file`: A "path" argument is given. Bunyan will open this file for\n  appending. E.g.:\n\n        {\n          "path": "/var/log/foo.log",\n          "level": "warn"\n        }\n\n  Bunyan re-emits error events from the created `WriteStream`. So you can\n  do this:\n\n        var log = new Logger({name: \'mylog\', streams: [{path: LOG_PATH}]});\n        log.on(\'error\', function (err, stream) {\n            // Handle stream write or create error here.\n        });\n\n- `raw`: Similar to a "stream" writeable stream, except that the write method\n  is given raw log record *Object*s instead of a JSON-stringified string.\n  This can be useful for hooking on further processing to all Bunyan logging:\n  pushing to an external service, a RingBuffer (see below), etc.\n\n\n## RingBuffer Stream\n\nBunyan comes with a special stream called a RingBuffer which keeps the last N\nrecords in memory and does *not* write the data anywhere else.  One common\nstrategy is to log \'info\' and higher to a normal log file but log all records\n(including \'trace\') to a ringbuffer that you can access via a debugger, or your\nown HTTP interface, or a post-mortem facility like MDB or node-panic.\n\nTo use a RingBuffer:\n\n    /* Create a ring buffer that stores the last 100 records. */\n    var bunyan = require(\'bunyan\');\n    var ringbuffer = new bunyan.RingBuffer({ limit: 100 });\n    var log = new bunyan({\n        name: \'foo\',\n        streams: [\n            {\n                level: \'info\',\n                stream: process.stdout\n            },\n            {\n                level: \'trace\',\n                type: \'raw\',    // use \'raw\' to get raw log record objects\n                stream: ringbuffer\n            }\n        ]\n    });\n\n    log.info(\'hello world\');\n    console.log(ringbuffer.records);\n\nThis example emits:\n\n    [ { name: \'foo\',\n        hostname: \'912d2b29\',\n        pid: 50346,\n        level: 30,\n        msg: \'hello world\',\n        time: \'2012-06-19T21:34:19.906Z\',\n        v: 0 } ]\n\n\n\n# License\n\nMIT.\n\n\n\n# Future\n\nSee "TODO.md".\n',
+324 silly resolved     _id: 'bunyan@0.10.0',
+324 silly resolved     _from: 'bunyan@0.10.0' },
+324 silly resolved   { author: { name: 'Mark Cavage', email: 'mcavage@gmail.com' },
+324 silly resolved     name: 'assert-plus',
+324 silly resolved     description: 'Extra assertions on top of node\'s assert module',
+324 silly resolved     version: '0.1.0',
+324 silly resolved     main: './assert.js',
+324 silly resolved     dependencies: {},
+324 silly resolved     devDependencies: {},
+324 silly resolved     optionalDependencies: {},
+324 silly resolved     engines: { node: '>=0.6' },
+324 silly resolved     readme: '# node-assert-extra\n\nThis library is a super small wrapper over node\'s assert module that has two\nthings: (1) the ability to disable assertions with the environment variable\nNODE_NDEBUG, and (2) some API wrappers for argument testing.  Like\n`assert.string(myArg, \'myArg\')`.  As a simple example, most of my code looks\nlike this:\n\n    var assert = require(\'assert-plus\');\n\n    function fooAccount(options, callback) {\n\t    assert.object(options, \'options\');\n\t\tassert.number(options.id, \'options.id);\n\t\tassert.bool(options.isManager, \'options.isManager\');\n\t\tassert.string(options.name, \'options.name\');\n\t\tassert.arrayOfString(options.email, \'options.email\');\n\t\tassert.func(callback, \'callback\');\n\n        // Do stuff\n\t\tcallback(null, {});\n    }\n\n# API\n\nAll methods that *aren\'t* part of node\'s core assert API are simply assumed to\ntake an argument, and then a string \'name\' that\'s not a message; `AssertionError`\nwill be thrown if the assertion fails with a message like:\n\n    AssertionError: foo (string) is required\n\tat test (/home/mark/work/foo/foo.js:3:9)\n\tat Object.<anonymous> (/home/mark/work/foo/foo.js:15:1)\n\tat Module._compile (module.js:446:26)\n\tat Object..js (module.js:464:10)\n\tat Module.load (module.js:353:31)\n\tat Function._load (module.js:311:12)\n\tat Array.0 (module.js:484:10)\n\tat EventEmitter._tickCallback (node.js:190:38)\n\nfrom:\n\n    function test(foo) {\n\t    assert.string(foo, \'foo\');\n    }\n\nThere you go.  You can check that arrays are of a homogenous type with `Arrayof$Type`:\n\n    function test(foo) {\n\t    assert.arrayOfString(foo, \'foo\');\n    }\n\nYou can assert IFF an argument is not `undefined` (i.e., an optional arg):\n\n    assert.optionalString(foo, \'foo\');\n\nLastly, you can opt-out of assertion checking altogether by setting the\nenvironment variable `NODE_NDEBUG=1`.  This is pseudo-useful if you have\nlots of assertions, and don\'t want to pay `typeof ()` taxes to v8 in\nproduction.\n\nThe complete list of APIs is:\n\n* assert.bool\n* assert.buffer\n* assert.func\n* assert.number\n* assert.object\n* assert.string\n* assert.arrayOfBool\n* assert.arrayOfFunc\n* assert.arrayOfNumber\n* assert.arrayOfObject\n* assert.arrayOfString\n* assert.optionalBool\n* assert.optionalBuffer\n* assert.optionalFunc\n* assert.optionalNumber\n* assert.optionalObject\n* assert.optionalString\n* assert.optionalArrayOfBool\n* assert.optionalArrayOfFunc\n* assert.optionalArrayOfNumber\n* assert.optionalArrayOfObject\n* assert.optionalArrayOfString\n* assert.AssertionError\n* assert.fail\n* assert.ok\n* assert.equal\n* assert.notEqual\n* assert.deepEqual\n* assert.notDeepEqual\n* assert.strictEqual\n* assert.notStrictEqual\n* assert.throws\n* assert.doesNotThrow\n* assert.ifError\n\n# Installation\n\n    npm install assert-plus\n\n## License\n\nThe MIT License (MIT)\nCopyright (c) 2012 Mark Cavage\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the "Software"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n## Bugs\n\nSee <https://github.com/mcavage/node-assert-plus/issues>.\n',
+324 silly resolved     _id: 'assert-plus@0.1.0',
+324 silly resolved     _from: 'assert-plus@0.1.0' },
+324 silly resolved   { name: 'buffertools',
+324 silly resolved     main: 'buffertools',
+324 silly resolved     version: '1.1.0',
+324 silly resolved     keywords: [ 'buffer', 'buffers' ],
+324 silly resolved     description: 'Working with node.js buffers made easy.',
+324 silly resolved     homepage: 'https://github.com/bnoordhuis/node-buffertools',
+324 silly resolved     author:
+324 silly resolved      { name: 'Ben Noordhuis',
+324 silly resolved        email: 'info@bnoordhuis.nl',
+324 silly resolved        url: 'http://bnoordhuis.nl/' },
+324 silly resolved     repository:
+324 silly resolved      { type: 'git',
+324 silly resolved        url: 'https://github.com/bnoordhuis/node-buffertools.git' },
+324 silly resolved     engines: { node: '>=0.3.0' },
+324 silly resolved     scripts: { install: 'node-gyp rebuild' },
+324 silly resolved     gypfile: true,
+324 silly resolved     contributors: [ [Object], [Object], [Object] ],
+324 silly resolved     readme: '# node-buffertools\n\nUtilities for manipulating buffers.\n\n## Installing the module\n\nEasy! With [npm](http://npmjs.org/):\n\n\tnpm install buffertools\n\nFrom source:\n\n\tnode-gyp configure\n\tnode-gyp build\n\nNow you can include the module in your project.\n\n\trequire(\'buffertools\');\n\tnew Buffer(42).clear();\n\n## Methods\n\nNote that most methods that take a buffer as an argument, will also accept a string.\n\n### Buffer.clear()\n\nClear the buffer. This is equivalent to `Buffer.fill(0)`.\nReturns the buffer object so you can chain method calls.\n\n### Buffer.compare(buffer|string)\n\nLexicographically compare two buffers. Returns a number less than zero\nif a < b, zero if a == b or greater than zero if a > b.\n\nBuffers are considered equal when they are of the same length and contain\nthe same binary data.\n\nSmaller buffers are considered to be less than larger ones. Some buffers\nfind this hurtful.\n\n### Buffer.concat(a, b, c, ...)\n### buffertools.concat(a, b, c, ...)\n\nConcatenate two or more buffers/strings and return the result. Example:\n\n\t// identical to new Buffer(\'foobarbaz\')\n\ta = new Buffer(\'foo\');\n\tb = new Buffer(\'bar\');\n\tc = a.concat(b, \'baz\');\n\tconsole.log(a, b, c); // "foo bar foobarbaz"\n\n\t// static variant\n\tbuffertools.concat(\'foo\', new Buffer(\'bar\'), \'baz\');\n\n### Buffer.equals(buffer|string)\n\nReturns true if this buffer equals the argument, false otherwise.\n\nBuffers are considered equal when they are of the same length and contain\nthe same binary data.\n\nCaveat emptor: If your buffers contain strings with different character encodings,\nthey will most likely *not* be equal.\n\n### Buffer.fill(integer|string|buffer)\n\nFill the buffer (repeatedly if necessary) with the argument.\nReturns the buffer object so you can chain method calls.\n\n### Buffer.fromHex()\n\nAssumes this buffer contains hexadecimal data (packed, no whitespace)\nand decodes it into binary data. Returns a new buffer with the decoded\ncontent. Throws an exception if non-hexadecimal data is encountered.\n\n### Buffer.indexOf(buffer|string, [start=0])\n\nSearch this buffer for the first occurrence of the argument, starting at\noffset `start`. Returns the zero-based index or -1 if there is no match.\n\n### Buffer.reverse()\n\nReverse the content of the buffer in place. Example:\n\n\tb = new Buffer(\'live\');\n\tb.reverse();\n\tconsole.log(b); // "evil"\n\n### Buffer.toHex()\n\nReturns the contents of this buffer encoded as a hexadecimal string.\n\n## Classes\n\nSingular, actually. To wit:\n\n## WritableBufferStream\n\nThis is a regular node.js [writable stream](http://nodejs.org/docs/v0.3.4/api/streams.html#writable_Stream)\nthat accumulates the data it receives into a buffer.\n\nExample usage:\n\n\t// slurp stdin into a buffer\n\tprocess.stdin.resume();\n\tostream = new WritableBufferStream();\n\tutil.pump(process.stdin, ostream);\n\tconsole.log(ostream.getBuffer());\n\nThe stream never emits \'error\' or \'drain\' events.\n\n### WritableBufferStream.getBuffer()\n\nReturn the data accumulated so far as a buffer.\n\n## TODO\n\n* Logical operations on buffers (AND, OR, XOR).\n* Add lastIndexOf() functions.\n',
+324 silly resolved     _id: 'buffertools@1.1.0',
+324 silly resolved     _from: 'buffertools@1.1.0' },
+324 silly resolved   { name: 'dtrace-provider',
+324 silly resolved     version: '0.0.9',
+324 silly resolved     description: 'Native DTrace providers for node.js applications',
+324 silly resolved     keywords: [ 'dtrace' ],
+324 silly resolved     homepage: 'https://github.com/chrisa/node-dtrace-provider#readme',
+324 silly resolved     author: { name: 'Chris Andrews', email: 'chris@nodnol.org' },
+324 silly resolved     main: './dtrace-provider.js',
+324 silly resolved     repository:
+324 silly resolved      { type: 'git',
+324 silly resolved        url: 'http://github.com/chrisa/node-dtrace-provider.git' },
+324 silly resolved     scripts: { install: 'node-waf clean ; node-waf configure build' },
+324 silly resolved     readme: '# dtrace-provider - Native DTrace providers for Node.js apps.\n\nThis extension allows you to create native DTrace providers for your\nNode.js applications. That is, to create providers and probes which\nexpose information specific to your application, rather than\ninformation about the node runtime.\n\nYou could use this to expose high-level information about the inner\nworkings of your application, or to create a specific context in which\nto look at information from other runtime or system-level providers. \n\nThe provider is not created in the usual way, by declaring it and then\nchanging the build process to include it, but instead dynamically at\nruntime. This is done entirely in-process, and there is no background\ncompiler or dtrace(1) invocation. The process creating the provider\nneed not run as root.\n\n## INSTALL\n\n    $ npm install dtrace-provider\n\n## EXAMPLE\n\nHere\'s a simple example of creating a provider:\n\n    var d = require(\'dtrace-provider\');\n\n    var dtp = d.createDTraceProvider("nodeapp");\n    dtp.addProbe("probe1", "int", "int");\n    dtp.addProbe("probe2", "char *");\n    dtp.enable();\t   \n    dtp.fire("probe1", function() { return [1, 2]; });\n    dtp.fire("probe2", function() { return ["hello, dtrace"]; });\n\nThis example creates a provider called "nodeapp", and adds two\nprobes. It then enables the provider, at which point the provider\nbecomes visible to DTrace.\n\nThe probes are then fired, which produces this output:\n\n    $ sudo dtrace -Z -n \'nodeapp*:::probe1{ trace(arg0); trace(arg1) }\'  \\\n                     -n \'nodeapp*:::probe2{ trace(copyinstr(arg0));  }\'\n    dtrace: description \'nodeapp*:::probe1\' matched 0 probes\n    dtrace: description \'nodeapp*:::probe2\' matched 0 probes\n    CPU     ID                    FUNCTION:NAME\n      1 123562                      func:probe1                 1                2\n      1 123563                      func:probe2   hello, dtrace                    \n\nArguments are captured by a callback only executed when the probe is\nenabled. This means you can do more expensive work to gather arguments.\n\n## PLATFORM SUPPORT\n\nThe nature of this extension means that support must be added for each\nplatform. Right now that support is only in place for OS X, 64 bit and\nSolaris, 32 bit.\n\n## LIMITATIONS\n\nThe maximum number of probe arguments is 6. There\'s scope to increase\nthis, with some extra complexity in the platform-specific code.\n \nThe data types supported are "int" and "char *". There\'s definitely\nscope to improve this, with more elaborate argument handling - see\nTODO.md\n\nYou can only create a provider once - although you don\'t have to do it\nimmediately, once you\'ve set up a provider you can\'t change its\ndefinition. It should be possible to enable updates - again, see\nTODO.md.\n\n## CAVEATS\n\nPerformance is not where it should be, most especially the\ndisabled-probe effect. Probes are already using the "is-enabled"\nfeature of DTrace to control execution of the arguments-gathering\ncallback, but too much work needs to be done before that\'s\nchecked. That being said, unless your (disabled) probes are\ninsanely hot, this shouldn\'t be a problem.\n\nPlease see TODO.md for the details. \n\n## CONTRIBUTING\n\nThe source is available at:\n\n  https://github.com/chrisa/node-dtrace-provider.\n\nFor issues, please use the Github issue tracker linked to the\nrepository. Github pull requests are very welcome. \n\n## OTHER IMPLEMENTATIONS\n\nThis node extension is derived from the ruby-dtrace gem, via the Perl\nmodule Devel::DTrace::Provider, both of which provide the same\nfunctionality to those languages.\n',
+324 silly resolved     _id: 'dtrace-provider@0.0.9',
+324 silly resolved     _from: 'dtrace-provider@0.0.9' },
+324 silly resolved   { name: 'pooling',
+324 silly resolved     description: 'General purpose resource pool API',
+324 silly resolved     version: '0.2.2',
+324 silly resolved     author: { name: 'Mark Cavage', email: 'mcavage@gmail.com' },
+324 silly resolved     main: 'lib/index.js',
+324 silly resolved     repository:
+324 silly resolved      { type: 'git',
+324 silly resolved        url: 'git://github.com/mcavage/node-pooling.git' },
+324 silly resolved     engines: { node: '>=0.6' },
+324 silly resolved     dependencies: { bunyan: '0.7.0', vasync: '1.1.1' },
+324 silly resolved     devDependencies: { cover: '0.2.8', nodeunit: '0.7.4' },
+324 silly resolved     scripts: { test: './node_modules/.bin/nodeunit ./test/*.test.js | ./node_modules/.bin/bunyan' },
+324 silly resolved     readme: '# Overview\n\n[pooling](https://github.com/mcavage/node-pooling) is a small general purpose\nresource pooling library.  It is heavily inspired from\n[James Cooper\'s](http://bitmechanic.com/) excellent\n[generic-pool](https://github.com/coopernurse/node-pool) library.  This library\nwas written after using that library for some time and desiring extra\nfunctionality (namely watching events and health checking).\n\n# Usage\n\n    var EventEmitter = require(\'events\').EventEmitter;\n    var pooling = require(\'pooling\');\n\n    var pool = pooling.createPool({\n            checkInterval: 30000, // 30s (default is 30s)\n            max: 10,              // Default is 1\n            maxIdleTime: 120000,  // 2m (default is 1 hour)\n            name: \'my pool\',\n\n            // Health check. Call the callback with an Error if you want\n            // to indicate this client should die. destroy will still be\n            // called (i.e., don\'t "double free").\n            //\n            // This function is called when an object is unused for\n            // >= maxIdleTime.  If you don\'t provide a check function,\n            // the default behavior is to mark the client for death.\n            check: function check(client, callback) {\n                    if ((client.id % 2) !== 0)\n                                return callback(new Error());\n\n                    return callback(null);\n            },\n\n            // callback is of the form function (err, client).\n            create: function create(callback) {\n                    var client = new EventEmitter();\n                    client.id = Math.floor(Math.random() * 1000);\n                    return callback(null, client);\n            },\n\n            // destroy is for you to do cleanup with; the pool will have already\n            // discarded the object (hence no callback)\n            destroy: function destroy(client) {\n                    client.was = client.id;\n                    client.id = -1;\n            }\n        });\n\n        pool.on(\'create\', function (client) {\n                console.log(\'client %d created\', client.id);\n        });\n\n        pool.on(\'death\', function (client) {\n                console.log(\'client %d was killed\', client.was);\n        });\n\n        pool.on(\'drain\', function () {\n                console.log(\'pool has no backlog or outstanding clients\');\n        });\n\n        pool.acquire(function (err, client) {\n                if (err) {\n                        console.error(\'Unable to acquire: %s\', err.stack);\n                        process.exit(1);\n                }\n\n                pool.release(client);\n                client.emit(\'error\', new Error(\'die now\'));\n        });\n\n        // Gracefully block future acquire calls and wait for clients to be\n        // released\n        pool.shutdown(function () {\n                console.log(\'done\');\n                process.exit(0);\n        });\n\nBy default the pool will remove clients on `close`, `end`, `error` and `timeout`\nevents.  You can override this by passing in an `events` array at pool creation\ntime.  You can also pass in a [Bunyan](https://github.com/trentm/node-bunyan)\n`Logger` - `pooling` logs everything at the `trace` level.\n\n# Install\n\n        npm install pooling\n\n# Development\n\nTo run unit tests and lint/style checks, just run:\n\n        make prepush\n\nYou can generate coverage data by running:\n\n        make cover\n\nAnd opening `./cover_data/index.html`.\n\n\n# License\n\nThe MIT License (MIT)\nCopyright (c) 2012 Mark Cavage\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the "Software"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n',
+324 silly resolved     _id: 'pooling@0.2.2',
+324 silly resolved     _from: 'pooling@0.2.2' } ]
+325 info install asn1@0.1.11 into /usr/local/lib/node_modules/ldapjs
+326 info install nopt@1.0.10 into /usr/local/lib/node_modules/ldapjs
+327 info install bunyan@0.10.0 into /usr/local/lib/node_modules/ldapjs
+328 info install assert-plus@0.1.0 into /usr/local/lib/node_modules/ldapjs
+329 info install buffertools@1.1.0 into /usr/local/lib/node_modules/ldapjs
+330 info install dtrace-provider@0.0.9 into /usr/local/lib/node_modules/ldapjs
+331 info install pooling@0.2.2 into /usr/local/lib/node_modules/ldapjs
+332 info installOne asn1@0.1.11
+333 info installOne nopt@1.0.10
+334 info installOne bunyan@0.10.0
+335 info installOne assert-plus@0.1.0
+336 info installOne buffertools@1.1.0
+337 info installOne dtrace-provider@0.0.9
+338 info installOne pooling@0.2.2
+339 verbose from cache /Users/Hunter/.npm/asn1/0.1.11/package/package.json
+340 verbose from cache /Users/Hunter/.npm/nopt/1.0.10/package/package.json
+341 verbose from cache /Users/Hunter/.npm/bunyan/0.10.0/package/package.json
+342 verbose from cache /Users/Hunter/.npm/assert-plus/0.1.0/package/package.json
+343 verbose from cache /Users/Hunter/.npm/buffertools/1.1.0/package/package.json
+344 verbose from cache /Users/Hunter/.npm/dtrace-provider/0.0.9/package/package.json
+345 verbose from cache /Users/Hunter/.npm/pooling/0.2.2/package/package.json
+346 info /usr/local/lib/node_modules/ldapjs/node_modules/asn1 unbuild
+347 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/asn1/package.json
+348 info /usr/local/lib/node_modules/ldapjs/node_modules/nopt unbuild
+349 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/nopt/package.json
+350 info /usr/local/lib/node_modules/ldapjs/node_modules/bunyan unbuild
+351 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/bunyan/package.json
+352 info /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus unbuild
+353 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus/package.json
+354 info /usr/local/lib/node_modules/ldapjs/node_modules/buffertools unbuild
+355 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/buffertools/package.json
+356 info /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider unbuild
+357 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider/package.json
+358 info /usr/local/lib/node_modules/ldapjs/node_modules/pooling unbuild
+359 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/package.json
+360 verbose tar unpack /Users/Hunter/.npm/asn1/0.1.11/package.tgz
+361 verbose tar unpack /Users/Hunter/.npm/nopt/1.0.10/package.tgz
+362 verbose tar unpack /Users/Hunter/.npm/bunyan/0.10.0/package.tgz
+363 verbose tar unpack /Users/Hunter/.npm/assert-plus/0.1.0/package.tgz
+364 verbose tar unpack /Users/Hunter/.npm/buffertools/1.1.0/package.tgz
+365 verbose tar unpack /Users/Hunter/.npm/dtrace-provider/0.0.9/package.tgz
+366 verbose tar unpack /Users/Hunter/.npm/pooling/0.2.2/package.tgz
+367 silly lockFile 3fdbfbce-modules-ldapjs-node-modules-asn1 /usr/local/lib/node_modules/ldapjs/node_modules/asn1
+368 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/asn1 /Users/Hunter/.npm/3fdbfbce-modules-ldapjs-node-modules-asn1.lock
+369 silly lockFile 830cc3f9-modules-ldapjs-node-modules-nopt /usr/local/lib/node_modules/ldapjs/node_modules/nopt
+370 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/nopt /Users/Hunter/.npm/830cc3f9-modules-ldapjs-node-modules-nopt.lock
+371 silly lockFile 69d6bc8d-dules-ldapjs-node-modules-bunyan /usr/local/lib/node_modules/ldapjs/node_modules/bunyan
+372 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/bunyan /Users/Hunter/.npm/69d6bc8d-dules-ldapjs-node-modules-bunyan.lock
+373 silly lockFile 87612ed6--ldapjs-node-modules-assert-plus /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus
+374 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus /Users/Hunter/.npm/87612ed6--ldapjs-node-modules-assert-plus.lock
+375 silly lockFile c85b32bb--ldapjs-node-modules-buffertools /usr/local/lib/node_modules/ldapjs/node_modules/buffertools
+376 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/buffertools /Users/Hunter/.npm/c85b32bb--ldapjs-node-modules-buffertools.lock
+377 silly lockFile 81813932-pjs-node-modules-dtrace-provider /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider
+378 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider /Users/Hunter/.npm/81813932-pjs-node-modules-dtrace-provider.lock
+379 silly lockFile 5ddd685e-ules-ldapjs-node-modules-pooling /usr/local/lib/node_modules/ldapjs/node_modules/pooling
+380 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/pooling /Users/Hunter/.npm/5ddd685e-ules-ldapjs-node-modules-pooling.lock
+381 silly gunzTarPerm modes [ '755', '644' ]
+382 silly gunzTarPerm modes [ '755', '644' ]
+383 silly gunzTarPerm modes [ '755', '644' ]
+384 silly gunzTarPerm modes [ '755', '644' ]
+385 silly gunzTarPerm modes [ '755', '644' ]
+386 silly gunzTarPerm modes [ '755', '644' ]
+387 silly gunzTarPerm modes [ '755', '644' ]
+388 silly gunzTarPerm extractEntry package.json
+389 silly gunzTarPerm extractEntry package.json
+390 silly gunzTarPerm extractEntry package.json
+391 silly gunzTarPerm extractEntry package.json
+392 silly gunzTarPerm extractEntry package.json
+393 silly gunzTarPerm extractEntry .npmignore
+394 silly gunzTarPerm extractEntry README.md
+395 silly gunzTarPerm extractEntry .npmignore
+396 silly gunzTarPerm extractEntry README.md
+397 silly gunzTarPerm extractEntry README.md
+398 silly gunzTarPerm extractEntry assert.js
+399 silly gunzTarPerm extractEntry .npmignore
+400 silly gunzTarPerm extractEntry README.md
+401 silly gunzTarPerm extractEntry package.json
+402 silly gunzTarPerm extractEntry package.json
+403 silly gunzTarPerm extractEntry .npmignore
+404 silly gunzTarPerm extractEntry README.md
+405 silly gunzTarPerm extractEntry .npmignore
+406 silly gunzTarPerm extractEntry README.md
+407 silly gunzTarPerm extractEntry .npmignore
+408 silly gunzTarPerm extractEntry README.md
+409 silly gunzTarPerm extractEntry LICENSE
+410 silly gunzTarPerm extractEntry lib/index.js
+411 silly gunzTarPerm extractEntry LICENSE
+412 silly gunzTarPerm extractEntry bin/nopt.js
+413 silly gunzTarPerm extractEntry CHANGES.md
+414 silly gunzTarPerm extractEntry examples/err.js
+415 silly gunzTarPerm extractEntry buffertools.js
+416 silly gunzTarPerm extractEntry test.js
+417 silly gunzTarPerm extractEntry LICENCE
+418 silly gunzTarPerm extractEntry dtrace-provider.js
+419 silly gunzTarPerm extractEntry .dir-locals.el
+420 silly gunzTarPerm extractEntry .gitmodules
+421 silly gunzTarPerm extractEntry lib/ber/errors.js
+422 silly gunzTarPerm extractEntry lib/ber/index.js
+423 silly gunzTarPerm extractEntry examples/my-program.js
+424 silly gunzTarPerm extractEntry lib/nopt.js
+425 silly gunzTarPerm extractEntry examples/handle-fs-error.js
+426 silly gunzTarPerm extractEntry examples/hi.js
+427 silly gunzTarPerm extractEntry lib/ber/reader.js
+428 silly gunzTarPerm extractEntry buffertools.cc
+429 silly gunzTarPerm extractEntry .mailmap
+430 silly gunzTarPerm extractEntry examples/level.js
+431 silly gunzTarPerm extractEntry examples/multi.js
+432 silly gunzTarPerm extractEntry build/binding.Makefile
+433 silly gunzTarPerm extractEntry examples/raw-stream.js
+434 silly gunzTarPerm extractEntry build/buffertools.target.mk
+435 silly gunzTarPerm extractEntry dtrace_provider.cc
+436 silly gunzTarPerm extractEntry dtrace_provider.h
+437 silly gunzTarPerm extractEntry examples/ringbuffer.js
+438 silly gunzTarPerm extractEntry build/config.gypi
+439 silly gunzTarPerm extractEntry lib/assert.js
+440 silly gunzTarPerm extractEntry lib/index.js
+441 silly gunzTarPerm extractEntry examples/server.js
+442 silly gunzTarPerm extractEntry build/Makefile
+443 silly gunzTarPerm extractEntry CHANGES.md
+444 silly gunzTarPerm extractEntry examples/src.js
+445 silly gunzTarPerm extractEntry lib/pool.js
+446 silly gunzTarPerm extractEntry darwin-x86_64/dtrace_probe.cc
+447 silly gunzTarPerm extractEntry lib/ber/types.js
+448 silly gunzTarPerm extractEntry lib/ber/writer.js
+449 silly gunzTarPerm extractEntry examples/unstringifyable.js
+450 silly gunzTarPerm extractEntry Makefile
+451 silly gunzTarPerm extractEntry wscript
+452 silly gunzTarPerm extractEntry lib/bunyan.js
+453 silly gunzTarPerm extractEntry test/helper.js
+454 silly gunzTarPerm extractEntry dtrace_dof.cc
+455 silly gunzTarPerm extractEntry tst/ber/reader.test.js
+456 silly gunzTarPerm extractEntry AUTHORS
+457 silly gunzTarPerm extractEntry test/pool.test.js
+458 silly gunzTarPerm extractEntry solaris-i386/dtrace_probe.cc
+459 silly gunzTarPerm extractEntry tools/timechild.js
+460 silly gunzTarPerm extractEntry tools/jsl.node.conf
+461 silly gunzTarPerm extractEntry tools/timeguard.js
+462 silly gunzTarPerm extractEntry tools/jsstyle.conf
+463 silly gunzTarPerm extractEntry tools/timesrc.js
+464 silly gunzTarPerm extractEntry build/Release/.deps/all.deps
+465 silly gunzTarPerm extractEntry build/Release/.deps/Release/buffertools.node.d
+466 silly gunzTarPerm extractEntry tools/mk/Makefile.defs
+467 silly gunzTarPerm extractEntry tools/cutarelease.py
+468 silly gunzTarPerm extractEntry tools/jsstyle
+469 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/buffertools/buffertools.o.d
+470 silly gunzTarPerm extractEntry tst/ber/writer.test.js
+471 silly gunzTarPerm extractEntry tools/statsd-notes.txt
+472 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/buffertools.node.d
+473 silly gunzTarPerm extractEntry bin/bunyan
+474 silly gunzTarPerm extractEntry build/Release/linker.lock
+475 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus/package.json
+476 silly gunzTarPerm extractEntry test/dtp.js
+477 silly gunzTarPerm extractEntry test/enabled_again.js
+478 silly gunzTarPerm extractEntry test/not-enabled.js
+479 silly gunzTarPerm extractEntry test/cli.test.js
+480 silly gunzTarPerm extractEntry tools/mk/Makefile.deps
+481 silly gunzTarPerm extractEntry tools/mk/Makefile.targ
+482 silly gunzTarPerm extractEntry test/ctor.test.js
+483 silly gunzTarPerm extractEntry test/error-event.test.js
+484 silly gunzTarPerm extractEntry test/log.test.js
+485 silly gunzTarPerm extractEntry test/raw-stream.test.js
+486 silly gunzTarPerm extractEntry build/Release/obj.target/buffertools/buffertools.o
+487 silly gunzTarPerm extractEntry core
+488 silly gunzTarPerm extractEntry test/ringbuffer.test.js
+489 silly gunzTarPerm extractEntry test/std-serializers.test.js
+490 silly lockFile 87612ed6--ldapjs-node-modules-assert-plus /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus
+491 silly gunzTarPerm extractEntry TODO.md
+492 silly gunzTarPerm extractEntry libusdt/.npmignore
+493 silly gunzTarPerm extractEntry test/corpus/all.log
+494 silly gunzTarPerm extractEntry test/corpus/bogus.log
+495 silly gunzTarPerm extractEntry test/corpus/extrafield.log
+496 silly gunzTarPerm extractEntry test/corpus/log1.log
+497 silly gunzTarPerm extractEntry test/corpus/log1.log.gz
+498 info preinstall assert-plus@0.1.0
+499 silly gunzTarPerm extractEntry test/corpus/log2.log
+500 silly gunzTarPerm extractEntry test/corpus/simple.log
+501 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus/package.json
+502 silly gunzTarPerm extractEntry TODO.md
+503 silly gunzTarPerm extractEntry libusdt/README
+504 silly gunzTarPerm extractEntry libusdt/LICENCE
+505 silly gunzTarPerm extractEntry libusdt/usdt_tracepoints_x86_64.s
+506 silly gunzTarPerm extractEntry libusdt/test.pl
+507 silly gunzTarPerm extractEntry libusdt/test_usdt.c
+508 silly gunzTarPerm extractEntry libusdt/usdt.c
+509 silly gunzTarPerm extractEntry libusdt/Makefile
+510 silly gunzTarPerm extractEntry Makefile
+511 silly gunzTarPerm extractEntry libusdt/usdt_dof.c
+512 silly gunzTarPerm extractEntry libusdt/usdt_dof_file.c
+513 silly gunzTarPerm extractEntry libusdt/usdt_dof_sections.c
+514 silly gunzTarPerm extractEntry libusdt/usdt_internal.h
+515 silly gunzTarPerm extractEntry libusdt/usdt_probe.c
+516 silly gunzTarPerm extractEntry libusdt/usdt_tracepoints_i386.s
+517 silly gunzTarPerm extractEntry libusdt/usdt.h
+518 verbose readDependencies using package.json deps
+519 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus/package.json
+520 verbose readDependencies using package.json deps
+521 silly resolved []
+522 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus
+523 info build /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus
+524 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/assert-plus/package.json
+525 verbose linkStuff [ true,
+525 verbose linkStuff   '/usr/local/lib/node_modules',
+525 verbose linkStuff   false,
+525 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules' ]
+526 info linkStuff assert-plus@0.1.0
+527 verbose linkBins assert-plus@0.1.0
+528 verbose linkMans assert-plus@0.1.0
+529 verbose rebuildBundles assert-plus@0.1.0
+530 info install assert-plus@0.1.0
+531 info postinstall assert-plus@0.1.0
+532 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/nopt/package.json
+533 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/asn1/package.json
+534 silly lockFile 3fdbfbce-modules-ldapjs-node-modules-asn1 /usr/local/lib/node_modules/ldapjs/node_modules/asn1
+535 info preinstall asn1@0.1.11
+536 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/asn1/package.json
+537 verbose readDependencies using package.json deps
+538 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/asn1/package.json
+539 verbose readDependencies using package.json deps
+540 silly resolved []
+541 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/asn1
+542 info build /usr/local/lib/node_modules/ldapjs/node_modules/asn1
+543 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/asn1/package.json
+544 verbose linkStuff [ true,
+544 verbose linkStuff   '/usr/local/lib/node_modules',
+544 verbose linkStuff   false,
+544 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules' ]
+545 info linkStuff asn1@0.1.11
+546 verbose linkBins asn1@0.1.11
+547 verbose linkMans asn1@0.1.11
+548 verbose rebuildBundles asn1@0.1.11
+549 info install asn1@0.1.11
+550 info postinstall asn1@0.1.11
+551 silly lockFile 830cc3f9-modules-ldapjs-node-modules-nopt /usr/local/lib/node_modules/ldapjs/node_modules/nopt
+552 info preinstall nopt@1.0.10
+553 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/nopt/package.json
+554 verbose readDependencies using package.json deps
+555 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/nopt/package.json
+556 verbose readDependencies using package.json deps
+557 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/package.json
+558 silly lockFile 5ddd685e-ules-ldapjs-node-modules-pooling /usr/local/lib/node_modules/ldapjs/node_modules/pooling
+559 info preinstall pooling@0.2.2
+560 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/package.json
+561 verbose cache add [ 'abbrev@1', null ]
+562 silly cache add name=undefined spec="abbrev@1" args=["abbrev@1",null]
+563 verbose parsed url { pathname: 'abbrev@1', path: 'abbrev@1', href: 'abbrev@1' }
+564 silly cache add name="abbrev" spec="1" args=["abbrev","1"]
+565 verbose parsed url { pathname: '1', path: '1', href: '1' }
+566 verbose addNamed [ 'abbrev', '1' ]
+567 verbose addNamed [ null, '>=1.0.0- <2.0.0-' ]
+568 silly lockFile 6830b531-abbrev-1 abbrev@1
+569 verbose lock abbrev@1 /Users/Hunter/.npm/6830b531-abbrev-1.lock
+570 verbose readDependencies using package.json deps
+571 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/package.json
+572 silly addNameRange { name: 'abbrev', range: '>=1.0.0- <2.0.0-', hasData: false }
+573 verbose readDependencies using package.json deps
+574 verbose cache add [ 'bunyan@0.7.0', null ]
+575 silly cache add name=undefined spec="bunyan@0.7.0" args=["bunyan@0.7.0",null]
+576 verbose parsed url { pathname: 'bunyan@0.7.0',
+576 verbose parsed url   path: 'bunyan@0.7.0',
+576 verbose parsed url   href: 'bunyan@0.7.0' }
+577 silly cache add name="bunyan" spec="0.7.0" args=["bunyan","0.7.0"]
+578 verbose parsed url { pathname: '0.7.0', path: '0.7.0', href: '0.7.0' }
+579 verbose addNamed [ 'bunyan', '0.7.0' ]
+580 verbose addNamed [ '0.7.0', '0.7.0' ]
+581 silly lockFile c6402092-bunyan-0-7-0 bunyan@0.7.0
+582 verbose lock bunyan@0.7.0 /Users/Hunter/.npm/c6402092-bunyan-0-7-0.lock
+583 verbose cache add [ 'vasync@1.1.1', null ]
+584 silly cache add name=undefined spec="vasync@1.1.1" args=["vasync@1.1.1",null]
+585 verbose parsed url { pathname: 'vasync@1.1.1',
+585 verbose parsed url   path: 'vasync@1.1.1',
+585 verbose parsed url   href: 'vasync@1.1.1' }
+586 silly cache add name="vasync" spec="1.1.1" args=["vasync","1.1.1"]
+587 verbose parsed url { pathname: '1.1.1', path: '1.1.1', href: '1.1.1' }
+588 verbose addNamed [ 'vasync', '1.1.1' ]
+589 verbose addNamed [ '1.1.1', '1.1.1' ]
+590 silly lockFile bfda17d1-vasync-1-1-1 vasync@1.1.1
+591 verbose lock vasync@1.1.1 /Users/Hunter/.npm/bfda17d1-vasync-1-1-1.lock
+592 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider/package.json
+593 silly lockFile 81813932-pjs-node-modules-dtrace-provider /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider
+594 info preinstall dtrace-provider@0.0.9
+595 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider/package.json
+596 verbose readDependencies using package.json deps
+597 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider/package.json
+598 verbose readDependencies using package.json deps
+599 silly resolved []
+600 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider
+601 info build /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider
+602 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider/package.json
+603 verbose linkStuff [ true,
+603 verbose linkStuff   '/usr/local/lib/node_modules',
+603 verbose linkStuff   false,
+603 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules' ]
+604 info linkStuff dtrace-provider@0.0.9
+605 verbose linkBins dtrace-provider@0.0.9
+606 verbose linkMans dtrace-provider@0.0.9
+607 verbose rebuildBundles dtrace-provider@0.0.9
+608 info install dtrace-provider@0.0.9
+609 verbose unsafe-perm in lifecycle false
+610 verbose set uid from=0 to=nobody
+611 verbose set uid from=0 to=-2
+612 silly exec sh "-c" "node-waf clean ; node-waf configure build"
+613 silly sh,-c,node-waf clean ; node-waf configure build,/usr/local/lib/node_modules/ldapjs/node_modules/dtrace-provider spawning
+614 verbose url raw abbrev
+615 verbose url resolving [ 'https://registry.npmjs.org/', './abbrev' ]
+616 verbose url resolved https://registry.npmjs.org/abbrev
+617 info retry registry request attempt 1 at 15:49:46
+618 verbose etag "1OTZMUFNUQ3IJH47S5RM4AOD0"
+619 http GET https://registry.npmjs.org/abbrev
+620 verbose url raw vasync/1.1.1
+621 verbose url resolving [ 'https://registry.npmjs.org/', './vasync/1.1.1' ]
+622 verbose url resolved https://registry.npmjs.org/vasync/1.1.1
+623 info retry registry request attempt 1 at 15:49:46
+624 verbose etag "228H7ZAEUHFTRN5FGZMVBSNHM"
+625 http GET https://registry.npmjs.org/vasync/1.1.1
+626 verbose url raw bunyan/0.7.0
+627 verbose url resolving [ 'https://registry.npmjs.org/', './bunyan/0.7.0' ]
+628 verbose url resolved https://registry.npmjs.org/bunyan/0.7.0
+629 info retry registry request attempt 1 at 15:49:46
+630 verbose etag "HG7MSO8Z1B8437U5JRM86A1Q"
+631 http GET https://registry.npmjs.org/bunyan/0.7.0
+632 silly gunzTarPerm extractEntry AUTHORS
+633 silly gunzTarPerm extractEntry binding.gyp
+634 silly gunzTarPerm extractEntry BoyerMoore.h
+635 silly gunzTarPerm extractEntry wscript
+636 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/bunyan/package.json
+637 silly lockFile 69d6bc8d-dules-ldapjs-node-modules-bunyan /usr/local/lib/node_modules/ldapjs/node_modules/bunyan
+638 info preinstall bunyan@0.10.0
+639 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/bunyan/package.json
+640 verbose readDependencies using package.json deps
+641 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/bunyan/package.json
+642 verbose readDependencies using package.json deps
+643 silly resolved []
+644 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/bunyan
+645 info build /usr/local/lib/node_modules/ldapjs/node_modules/bunyan
+646 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/bunyan/package.json
+647 verbose linkStuff [ true,
+647 verbose linkStuff   '/usr/local/lib/node_modules',
+647 verbose linkStuff   false,
+647 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules' ]
+648 info linkStuff bunyan@0.10.0
+649 verbose linkBins bunyan@0.10.0
+650 verbose link bins [ { bunyan: './bin/bunyan' },
+650 verbose link bins   '/usr/local/lib/node_modules/ldapjs/node_modules/.bin',
+650 verbose link bins   false ]
+651 verbose linkMans bunyan@0.10.0
+652 verbose rebuildBundles bunyan@0.10.0
+653 info install bunyan@0.10.0
+654 info postinstall bunyan@0.10.0
+655 http 304 https://registry.npmjs.org/vasync/1.1.1
+656 silly registry.get cb [ 304,
+656 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+656 silly registry.get     etag: '"228H7ZAEUHFTRN5FGZMVBSNHM"',
+656 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:46 GMT',
+656 silly registry.get     'content-length': '0' } ]
+657 verbose etag vasync/1.1.1 from cache
+658 http 304 https://registry.npmjs.org/abbrev
+659 silly registry.get cb [ 304,
+659 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+659 silly registry.get     etag: '"1OTZMUFNUQ3IJH47S5RM4AOD0"',
+659 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:46 GMT',
+659 silly registry.get     'content-length': '0' } ]
+660 verbose etag abbrev from cache
+661 http 304 https://registry.npmjs.org/bunyan/0.7.0
+662 silly registry.get cb [ 304,
+662 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+662 silly registry.get     etag: '"HG7MSO8Z1B8437U5JRM86A1Q"',
+662 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:46 GMT',
+662 silly registry.get     'content-length': '0' } ]
+663 verbose etag bunyan/0.7.0 from cache
+664 silly addNameRange number 2 { name: 'abbrev', range: '>=1.0.0- <2.0.0-', hasData: true }
+665 silly addNameRange versions [ 'abbrev', [ '1.0.1', '1.0.2', '1.0.3' ] ]
+666 verbose addNamed [ 'abbrev', '1.0.3' ]
+667 verbose addNamed [ '1.0.3', '1.0.3' ]
+668 silly lockFile eaef08d7-abbrev-1-0-3 abbrev@1.0.3
+669 verbose lock abbrev@1.0.3 /Users/Hunter/.npm/eaef08d7-abbrev-1-0-3.lock
+670 verbose read json /Users/Hunter/.npm/vasync/1.1.1/package/package.json
+671 verbose read json /Users/Hunter/.npm/abbrev/1.0.3/package/package.json
+672 verbose read json /Users/Hunter/.npm/bunyan/0.7.0/package/package.json
+673 silly lockFile bfda17d1-vasync-1-1-1 vasync@1.1.1
+674 silly lockFile c6402092-bunyan-0-7-0 bunyan@0.7.0
+675 silly lockFile eaef08d7-abbrev-1-0-3 abbrev@1.0.3
+676 silly resolved [ { name: 'vasync',
+676 silly resolved     version: '1.1.1',
+676 silly resolved     description: 'utilities for observable asynchronous control flow',
+676 silly resolved     main: './lib/vasync.js',
+676 silly resolved     repository:
+676 silly resolved      { type: 'git',
+676 silly resolved        url: 'git://github.com/davepacheco/node-vasync.git' },
+676 silly resolved     dependencies: { verror: '1.1.0' },
+676 silly resolved     engines: [ 'node >=0.6.0' ],
+676 silly resolved     readme: '# vasync: utilities for observable asynchronous control flow\n\nThis module provides facilities for asynchronous control flow.  There are many\nmodules that do this already (notably async.js).  This one\'s claim to fame is\naided debuggability: each of the contained functions return a "status" object\nwith the following fields:\n\n    operations          array corresponding to the input functions, with\n\n            func            input function\n\n            status          "pending", "ok", or "fail"\n\n            err             returned "err" value, if any\n\n            result          returned "result" value, if any\n\n    successes\t\t"result" field for each of "operations" where\n    \t\t\t"status" == "ok"\n\n    ndone               number of input operations that have completed\n\n    nerrors             number of input operations that have failed\n\nYou can use this from a debugger (or your own monitoring code) to understand\nthe state of an ongoing asynchronous operation.  For example, you could see how\nfar into a pipeline some particular operation is.\n\n\n## parallel(args, callback): invoke N functions in parallel and merge the results\n\nThis function takes a list of input functions (specified by the "funcs" property\nof "args") and runs them all.  These input functions are expected to be\nasynchronous: they get a "callback" argument and should invoke it as\ncallback(err, result).  The error and result will be saved and made available to\nthe original caller when all of these functions complete.\n\nAll errors are combined into a single "err" parameter to the final callback (see\nbelow).  You can also observe the progress of the operation as it goes by\nexamining the object returned synchronously by this function.\n\nExample usage:\n\n    status = mod_vasync.parallel({\n        \'funcs\': [\n             function f1 (callback) { mod_fs.stat(\'/tmp\', callback); },\n             function f2 (callback) { mod_fs.stat(\'/noexist\', callback); },\n             function f3 (callback) { mod_fs.stat(\'/var\', callback); }\n        ]\n    }, function (err, results) {\n            console.log(\'error: %s\', err.message);\n            console.log(\'results: %s\', mod_util.inspect(results, null, 3));\n    });\n\n    console.log(\'status: %s\', mod_sys.inspect(status, null, 3));\n\nIn the first tick, this outputs:\n\n    status: { operations: \n       [ { func: [Function: f1], status: \'pending\' },\n         { func: [Function: f2], status: \'pending\' },\n         { func: [Function: f3], status: \'pending\' } ],\n      successes: [],\n      ndone: 0,\n      nerrors: 0 }\n\nshowing that there are three operations pending and none has yet been started.\nWhen the program finishes, it outputs this error:\n\n    error: first of 1 error: ENOENT, no such file or directory \'/noexist\'\n\nwhich encapsulates all of the intermediate failures.  This model allows you to\nwrite the final callback like you normally would:\n\n    if (err)\n            return (callback(err));\n\nand still propagate useful information to callers that don\'t deal with multiple\nerrors (i.e. most callers).\n\nThe example also prints out the detailed final status, including all of the\nerrors and return values:\n\n    results: { operations: \n       [ { func: [Function: f1],\n           status: \'ok\',\n           err: null,\n           result: \n            { dev: 140247096,\n              ino: 879368309,\n              mode: 17407,\n              nlink: 9,\n              uid: 0,\n              gid: 3,\n              rdev: 0,\n              size: 754,\n              blksize: 4096,\n              blocks: 8,\n              atime: Thu, 12 Apr 2012 23:18:57 GMT,\n              mtime: Tue, 17 Apr 2012 23:56:34 GMT,\n              ctime: Tue, 17 Apr 2012 23:56:34 GMT } },\n         { func: [Function: f2],\n           status: \'fail\',\n           err: { [Error: ENOENT, no such file or directory \'/noexist\'] errno: 34, code: \'ENOENT\', path: \'/noexist\' },\n           result: undefined },\n         { func: [Function: f3],\n           status: \'ok\',\n           err: null,\n           result: \n            { dev: 23658528,\n              ino: 5,\n              mode: 16877,\n              nlink: 27,\n              uid: 0,\n              gid: 0,\n              rdev: -1,\n              size: 27,\n              blksize: 2560,\n              blocks: 3,\n              atime: Fri, 09 Sep 2011 14:28:55 GMT,\n              mtime: Wed, 04 Apr 2012 17:51:20 GMT,\n              ctime: Wed, 04 Apr 2012 17:51:20 GMT } } ],\n      successes: \n       [ { dev: 234881026,\n           ino: 24965,\n           mode: 17407,\n           nlink: 8,\n           uid: 0,\n           gid: 0,\n           rdev: 0,\n           size: 272,\n           blksize: 4096,\n           blocks: 0,\n           atime: Tue, 01 May 2012 16:02:24 GMT,\n           mtime: Tue, 01 May 2012 19:10:35 GMT,\n           ctime: Tue, 01 May 2012 19:10:35 GMT },\n         { dev: 234881026,\n           ino: 216,\n           mode: 16877,\n           nlink: 26,\n           uid: 0,\n           gid: 0,\n           rdev: 0,\n           size: 884,\n           blksize: 4096,\n           blocks: 0,\n           atime: Tue, 01 May 2012 16:02:24 GMT,\n           mtime: Fri, 14 Aug 2009 21:23:03 GMT,\n           ctime: Thu, 28 Oct 2010 21:51:39 GMT } ],\n      ndone: 3,\n      nerrors: 1 }\n\nYou can use this if you want to handle all of the errors individually or to get\nat all of the individual return values.\n\n\n## forEachParallel(args, callback): invoke the same function on N inputs in parallel\n\nThis function is exactly like `parallel`, except that the input is specified as\na *single* function ("func") and a list of inputs ("inputs").  The function is\ninvoked on each input in parallel.\n\nThis example is exactly equivalent to the one above:\n\n    mod_vasync.forEachParallel({\n        \'func\': mod_fs.stat,\n        \'inputs\': [ \'/var\', \'/nonexistent\', \'/tmp\' ]\n    }, function (err, results) {\n        console.log(\'error: %s\', err.message);\n        console.log(\'results: %s\', mod_util.inspect(results, null, 3));\n    });\n\n\n## pipeline(args, callback): invoke N functions in series (and stop on failure)\n\nThe arguments for this function are:\n\n* funcs: input functions, to be invoked in series\n* arg: arbitrary argument that will be passed to each function\n\nThe functions are invoked in order as `func(arg, callback)`, where "arg" is the\nuser-supplied argument from "args" and "callback" should be invoked in the usual\nway.  If any function emits an error, the whole pipeline stops.\n\nThe return value and the arguments to the final callback are exactly the same as\nfor `parallel`.  The error object for the final callback is just the error\nreturned by whatever pipeline function failed (if any).\n\nThis example is similar to the one above, except that it runs the steps in\nsequence and stops early because `pipeline` stops on the first error:\n\n    console.log(mod_vasync.pipeline({\n        \'funcs\': [\n            function f1 (_, callback) { mod_fs.stat(\'/tmp\', callback); },\n            function f2 (_, callback) { mod_fs.stat(\'/noexist\', callback); },\n            function f3 (_, callback) { mod_fs.stat(\'/var\', callback); }\n        ]\n    }, function (err, results) {\n            console.log(\'error: %s\', err.message);\n            console.log(\'results: %s\', mod_util.inspect(results, null, 3));\n    }));\n\nAs a result, the status after the first tick looks like this:\n\n    { operations: \n       [ { func: [Function: f1], status: \'pending\' },\n         { func: [Function: f2], status: \'waiting\' },\n         { func: [Function: f3], status: \'waiting\' } ],\n      successes: [],\n      ndone: 0,\n      nerrors: 0 }\n\n(Note that the second and third stages are now "waiting", rather than "pending"\nin the `parallel` case.)  The error reported is:\n\n    error: ENOENT, no such file or directory \'/noexist\'\n\nand the complete result is:\n\n    results: { operations: \n       [ { func: [Function: f1],\n           status: \'ok\',\n           err: null,\n           result: \n            { dev: 140247096,\n              ino: 879368309,\n              mode: 17407,\n              nlink: 9,\n              uid: 0,\n              gid: 3,\n              rdev: 0,\n              size: 754,\n              blksize: 4096,\n              blocks: 8,\n              atime: Thu, 12 Apr 2012 23:18:57 GMT,\n              mtime: Tue, 17 Apr 2012 23:56:34 GMT,\n              ctime: Tue, 17 Apr 2012 23:56:34 GMT } },\n         { func: [Function: f2],\n           status: \'fail\',\n           err: { [Error: ENOENT, no such file or directory \'/noexist\'] errno: 34, code: \'ENOENT\', path: \'/noexist\' },\n           result: undefined },\n         { func: [Function: f3], status: \'waiting\' } ],\n      successes: \n       [ { dev: 234881026,\n           ino: 24965,\n           mode: 17407,\n           nlink: 8,\n           uid: 0,\n           gid: 0,\n           rdev: 0,\n           size: 272,\n           blksize: 4096,\n           blocks: 0,\n           atime: Tue, 01 May 2012 16:02:24 GMT,\n           mtime: Tue, 01 May 2012 19:10:35 GMT,\n           ctime: Tue, 01 May 2012 19:10:35 GMT } ],\n      ndone: 2,\n      nerrors: 1 }\n',
+676 silly resolved     _id: 'vasync@1.1.1',
+676 silly resolved     _from: 'vasync@1.1.1' },
+676 silly resolved   { name: 'bunyan',
+676 silly resolved     version: '0.7.0',
+676 silly resolved     description: 'a JSON Logger library for node.js servers',
+676 silly resolved     author:
+676 silly resolved      { name: 'Trent Mick',
+676 silly resolved        email: 'trentm@gmail.com',
+676 silly resolved        url: 'http://trentm.com' },
+676 silly resolved     main: './lib/bunyan.js',
+676 silly resolved     bin: { bunyan: './bin/bunyan' },
+676 silly resolved     repository: { type: 'git', url: 'git://github.com/trentm/node-bunyan.git' },
+676 silly resolved     engines: [ 'node >=0.4.0' ],
+676 silly resolved     keywords: [ 'log', 'logging', 'log4j', 'json' ],
+676 silly resolved     devDependencies: { tap: '0.2.0', ben: '0.0.0' },
+676 silly resolved     contributors: [ [Object], [Object] ],
+676 silly resolved     readme: 'Bunyan is a simple and fast a JSON Logger for node.js services (and a `bunyan`\nCLI tool for nicely viewing those logs).\n\nServer logs should be structured. JSON\'s a good format. Let\'s do that: a log\nrecord is one line of `JSON.stringify`\'d output. Let\'s also specify some common\nnames for the requisite and common fields for a log record (see below).\n\nAlso: log4j is way more than you need.\n\n\n# Current Status\n\nBasic functionality there. Still a fair amount of planned work, but I\'m using\nit for some production services.\n\nCurrently supports node 0.4+, but I\'ll probably make the jump to node 0.6+ as a\nbase soonish.\n\nFollow <a href="https://twitter.com/intent/user?screen_name=trentmick" target="_blank">@trentmick</a>\nfor updates to Bunyan.\n\nSee also: [Bunyan for Bash](https://github.com/trevoro/bash-bunyan).\n\n\n# Installation\n\n    npm install bunyan\n\n\n# Usage\n\n**The usual.** All loggers must provide a "name". This is somewhat akin\nto log4j logger "name", but Bunyan doesn\'t do hierarchical logger names.\n\n    $ cat hi.js\n    var Logger = require(\'bunyan\');\n    var log = new Logger({name: "myapp"});\n    log.info("hi");\n\nAlternatively, bunyan 0.7.0 and up supports a more node.js-land typical\nstyle (which might become the preferred form over time):\n\n    var bunyan = require(\'bunyan\');\n    var log = bunyan.createLogger({name: "myapp"});\n\n**Log records are JSON.** "hostname", "time" and "v" (the Bunyan log\nformat version) are added for you.\n\n    $ node hi.js\n    {"name":"myapp","hostname":"banana.local","pid":123,"level":2,"msg":"hi","time":"2012-01-31T00:07:44.216Z","v":0}\n\nThe full `log.{trace|debug|...|fatal}(...)` API is:\n\n    log.info();     // Returns a boolean: is the "info" level enabled?\n\n    log.info(\'hi\');                     // Log a simple string message.\n    log.info(\'hi %s\', bob, anotherVar); // Uses `util.format` for msg formatting.\n\n    log.info({foo: \'bar\'}, \'hi\');       // Adds "foo" field to log record.\n\n    log.info(err);  // Special case to log an `Error` instance, adds "err"\n                    // key with exception details (including the stack) and\n                    // sets "msg" to the exception message.\n    log.info(err, \'more on this: %s\', more);\n                    // ... or you can specify the "msg".\n\n## bunyan tool\n\nA `bunyan` tool is provided **for pretty-printing bunyan logs** and, eventually,\nfor filtering (e.g. `| bunyan -c \'level>3\'`). This shows the default output\n(which is fluid right now) and indented-JSON output. More output formats will\nbe added, including support for custom formats.\n\n    $ node hi.js | ./bin/bunyan  # CLI tool to filter/pretty-print JSON logs.\n    [2012-01-31T00:08:11.387Z] INFO: myapp on banana.local/123: hi\n\n    $ node hi.js | ./bin/bunyan -o json\n    {\n      "name": "myapp",\n      "hostname": "banana.local",\n      "pid": 123,\n      "level": 2,\n      "msg": "hi",\n      "time": "2012-01-31T00:10:00.676Z",\n      "v": 0\n    }\n\n\n## streams\n\nBy default, log output is to stdout (**stream**) and at the "info" level.\nExplicitly that looks like:\n\n    var log = new Logger({name: "myapp", stream: process.stdout,\n      level: "info"});\n\nThat is an abbreviated form for a single stream. **You can defined multiple\nstreams at different levels**.\n\n    var log = new Logger({\n      name: "amon",\n      streams: [\n        {\n          level: "info",\n          stream: process.stdout, // log INFO and above to stdout\n        },\n        {\n          level: "error",\n          path: "tmp/error.log"   // log ERROR and above to a file\n        }\n      ]\n    });\n\nMore on streams in the "Streams" section below.\n\n\n## log.child\n\nA `log.child(...)` is provided to **specialize a logger for a sub-component**.\nThe following will have log records from "Wuzzle" instances use exactly the\nsame config as its parent, plus include the "component" field.\n\n    var log = new Logger(...);\n\n    ...\n\n    function Wuzzle(options) {\n      this.log = options.log;\n      this.log.info("creating a wuzzle")\n    }\n    Wuzzle.prototype.woos = function () {\n      this.log.warn("This wuzzle is woosey.")\n    }\n\n    var wuzzle = new Wuzzle({log: log.child({component: "wuzzle"})});\n    wuzzle.woos();\n    log.info("done with the wuzzle")\n\nThe [node-restify](https://github.com/mcavage/node-restify)\nframework integrates bunyan. One feature of its integration, is that each\nrestify request handler includes a `req.log` logger that is:\n\n    log.child({req_id: <unique request id>}, true)\n\nApps using restify can then use `req.log` and have all such log records\ninclude the unique request id (as "req_id"). Handy.\n\n\n## serializers\n\nBunyan has a concept of **"serializers" to produce a JSON-able object from a\nJavaScript object**, so you can easily do the following:\n\n    log.info({req: <request object>}, "something about handling this request");\n\nAssociation is by log record field name, "req" in this example, so this\nrequires a registered serializer something like this:\n\n    function reqSerializer(req) {\n      return {\n        method: req.method,\n        url: req.url,\n        headers: req.headers\n      }\n    }\n    var log = new Logger({\n      ...\n      serializers: {\n        req: reqSerializer\n      }\n    });\n\nOr this:\n\n    var log = new Logger({\n      ...\n      serializers: {req: Logger.stdSerializers.req}\n    });\n\nbecause Buyan includes a small set of standard serializers. To use all the\nstandard serializers you can use:\n\n    var log = new Logger({\n      ...\n      serializers: Logger.stdSerializers\n    });\n\n*Note: Your own serializers should never throw, otherwise you\'ll get an\nugly message on stderr from Bunyan (along with the traceback) and the field\nin your log record will be replaced with a short error message.*\n\n## src\n\nThe **source file, line and function of the log call site** can be added to\nlog records by using the `src: true` config option:\n\n    var log = new Logger({src: true, ...});\n\nThis adds the call source info with the \'src\' field, like this:\n\n    {\n      "name": "src-example",\n      "hostname": "banana.local",\n      "pid": 123,\n      "component": "wuzzle",\n      "level": 4,\n      "msg": "This wuzzle is woosey.",\n      "time": "2012-02-06T04:19:35.605Z",\n      "src": {\n        "file": "/Users/trentm/tm/node-bunyan/examples/src.js",\n        "line": 20,\n        "func": "Wuzzle.woos"\n      },\n      "v": 0\n    }\n\n**WARNING: Determining the call source info is slow. Never use this option\nin production.**\n\n\n# Levels\n\nThe log levels in bunyan are:\n\n- "fatal" (60): the service/app is going to stop or become unusable now\n- "error" (50): fatal for a particular request, but the service/app continues servicing other requests\n- "warn" (40): a note on something that should probably be looked at by an operator\n- "info" (30): detail on regular operation\n- "debug" (20): anything else, i.e. too verbose to be included in "info" level.\n- "trace" (10): logging from external libraries used by your app\n\nGeneral level usage suggestions: "debug" should be used sparingly.\nInformation that will be useful to debug errors *post mortem* should usually\nbe included in "info" messages if it\'s generally relevant or else with the\ncorresponding "error" event. Don\'t rely on spewing mostly irrelevant debug\nmessages all the time and sifting through them when an error occurs.\n\nIntegers are used for the actual level values (10 for "trace", ..., 60 for\n"fatal") and constants are defined for the (Logger.TRACE ... Logger.DEBUG).\nThe lowercase level names are aliases supported in the API.\n\nHere is the API for changing levels in an existing logger:\n\n    log.level() -> INFO   // gets current level (lowest level of all streams)\n\n    log.level(INFO)       // set all streams to level INFO\n    log.level("info")     // set all streams to level INFO\n\n    log.levels() -> [DEBUG, INFO]   // get array of levels of all streams\n    log.levels(0) -> DEBUG          // get level of stream at index 0\n    log.levels("foo")               // get level of stream with name "foo"\n\n    log.levels(0, INFO)             // set level of stream 0 to INFO\n    log.levels(0, "info")           // can use "info" et al aliases\n    log.levels("foo", WARN)         // set stream named "foo" to WARN\n\n\n\n# Log Record Fields\n\nThis section will describe *rules* for the Bunyan log format: field names,\nfield meanings, required fields, etc. However, a Bunyan library doesn\'t\nstrictly enforce all these rules while records are being emitted. For example,\nBunyan will add a `time` field with the correct format to your log records,\nbut you can specify your own. It is the caller\'s responsibility to specify\nthe appropriate format.\n\nThe reason for the above leniency is because IMO logging a message should\nnever break your app. This leads to this rule of logging: **a thrown\nexception from `log.info(...)` or equivalent (other than for calling with the\nincorrect signature) is always a bug in Bunyan.**\n\n\nA typical Bunyan log record looks like this:\n\n    {"name":"myserver","hostname":"banana.local","pid":123,"req":{"method":"GET","url":"/path?q=1#anchor","headers":{"x-hi":"Mom","connection":"close"}},"level":3,"msg":"start request","time":"2012-02-03T19:02:46.178Z","v":0}\n\nPretty-printed:\n\n    {\n      "name": "myserver",\n      "hostname": "banana.local",\n      "pid": 123,\n      "req": {\n        "method": "GET",\n        "url": "/path?q=1#anchor",\n        "headers": {\n          "x-hi": "Mom",\n          "connection": "close"\n        },\n        "remoteAddress": "120.0.0.1",\n        "remotePort": 51244\n      },\n      "level": 3,\n      "msg": "start request",\n      "time": "2012-02-03T19:02:57.534Z",\n      "v": 0\n    }\n\n\nCore fields:\n\n- `v`: Required. Integer. Added by Bunion. Cannot be overriden.\n  This is the Bunyan log format version (`require(\'bunyan\').LOG_VERSION`).\n  The log version is a single integer. `0` is until I release a version\n  "1.0.0" of node-bunyan. Thereafter, starting with `1`, this will be\n  incremented if there is any backward incompatible change to the log record\n  format. Details will be in "CHANGES.md" (the change log).\n- `level`: Required. Integer. Added by Bunion. Cannot be overriden.\n  See the "Levels" section.\n- `name`: Required. String. Provided at Logger creation.\n  You must specify a name for your logger when creating it. Typically this\n  is the name of the service/app using Bunyan for logging.\n- `hostname`: Required. String. Provided or determined at Logger creation.\n  You can specify your hostname at Logger creation or it will be retrieved\n  vi `os.hostname()`.\n- `pid`: Required. Integer. Filled in automatically at Logger creation.\n- `time`: Required. String. Added by Bunion. Can be overriden.\n  The date and time of the event in [ISO 8601\n  Extended Format](http://en.wikipedia.org/wiki/ISO_8601) format and in UTC,\n  as from\n  [`Date.toISOString()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date/toISOString).\n- `msg`: Required. String.\n  Every `log.debug(...)` et al call must provide a log message.\n- `src`: Optional. Object giving log call source info. This is added\n  automatically by Bunyan if the "src: true" config option is given to the\n  Logger. Never use in production as this is really slow.\n\n\nGo ahead and add more fields, and nest ones are fine (and recommended) as\nwell. This is why we\'re using JSON. Some suggestions and best practices\nfollow (feedback from actual users welcome).\n\n\nRecommended/Best Practice Fields:\n\n-   `err`: Object. A caught JS exception. Log that thing with `log.info(err)`\n    to get:\n\n        ...\n        "err": {\n          "message": "boom",\n          "name": "TypeError",\n          "stack": "TypeError: boom\\n    at Object.<anonymous> ..."\n        },\n        "msg": "boom",\n        ...\n\n    Or use the `Logger.stdSerializers.err` serializer in your Logger and\n    do this `log.error({err: err}, "oops")`. See "examples/err.js".\n\n- `req_id`: String. A request identifier. Including this field in all logging\n  tied to handling a particular request to your server is strongly suggested.\n  This allows post analysis of logs to easily collate all related logging\n  for a request. This really shines when you have a SOA with multiple services\n  and you carry a single request ID from the top API down through all APIs\n  (as [node-restify](https://github.com/mcavage/node-restify) facilitates\n  with its \'X-Request-Id\' header).\n\n- `req`: An HTTP server request. Bunyan provides `Logger.stdSerializers.req`\n  to serialize a request with a suggested set of keys. Example:\n\n        {\n          "method": "GET",\n          "url": "/path?q=1#anchor",\n          "headers": {\n            "x-hi": "Mom",\n            "connection": "close"\n          },\n          "remoteAddress": "120.0.0.1",\n          "remotePort": 51244\n        }\n\n- `res`: An HTTP server response. Bunyan provides `Logger.stdSerializers.res`\n  to serialize a response with a suggested set of keys. Example:\n\n        {\n          "statusCode": 200,\n          "header": "HTTP/1.1 200 OK\\r\\nContent-Type: text/plain\\r\\nConnection: keep-alive\\r\\nTransfer-Encoding: chunked\\r\\n\\r\\n"\n        }\n\n\nOther fields to consider:\n\n- `req.username`: Authenticated user (or for a 401, the user attempting to\n  auth).\n- Some mechanism to calculate response latency. "restify" users will have\n  a "X-Response-Time" header. A `latency` custom field would be fine.\n- `req.body`: If you know that request bodies are small (common in APIs,\n  for example), then logging the request body is good.\n\n\n# Streams\n\nA "stream" is Bunyan\'s name for an output for log messages (the equivalent\nto a log4j Appender). Ultimately Bunyan uses a\n[Writable Stream](http://nodejs.org/docs/latest/api/all.html#writable_Stream)\ninterface, but there are some additional attributes used to create and\nmanage the stream. A Bunyan Logger instance has one or more streams.\nIn general streams are specified with the "streams" option:\n\n    var Logger = require(\'bunyan\');\n    var log = new Logger({\n      name: "foo",\n      streams: [\n        {\n            stream: process.stderr,\n            level: "debug"\n        },\n        ...\n      ]\n    })\n\nFor convenience, if there is only one stream, it can specified with the\n"stream" and "level" options (internal converted to a `Logger.streams`):\n\n    var log = new Logger({\n      name: "foo",\n      stream: process.stderr,\n      level: "debug"\n    })\n\nIf none are specified, the default is a stream on `process.stdout` at the\n"info" level.\n\n`Logger.streams` is an array of stream objects with the following attributes:\n\n- `type`: Typically implied. E.g. "stream" or "file". See supported types\n  below.\n- `stream`: This is the "Writable Stream", e.g. a std handle or an open\n  file write stream.\n- `level`: The level at which logging to this stream is enabled. If not\n  specified it defaults to INFO.\n\nSupported stream types are:\n\n- `stream`: A "stream" argument is given.\n- `file`: A "path" argument is given. Bunyan will open this file for\n  appending. E.g.:\n\n        {\n          "path": "/var/log/foo.log",\n          "level": "warn"\n        }\n\n\n\n# License\n\nMIT.\n\n\n# Future\n\nSee "TODO.md", but basically:\n\n- Ring-buffer support for storing last N debug messages\n  (or whatever) in memory to support debugability without too much log load.\n\n- More `bunyan` output formats and filtering features.\n\n- Think about a bunyan dashboard that supports organizing and viewing logs\n  from multiple hosts and services.\n\n- Syslog support.\n\n- Some speed comparisons with others to get a feel for Bunyan\'s speed.\n',
+676 silly resolved     _id: 'bunyan@0.7.0',
+676 silly resolved     _from: 'bunyan@0.7.0' } ]
+677 info install vasync@1.1.1 into /usr/local/lib/node_modules/ldapjs/node_modules/pooling
+678 info install bunyan@0.7.0 into /usr/local/lib/node_modules/ldapjs/node_modules/pooling
+679 info installOne vasync@1.1.1
+680 info installOne bunyan@0.7.0
+681 silly lockFile 6830b531-abbrev-1 abbrev@1
+682 verbose from cache /Users/Hunter/.npm/vasync/1.1.1/package/package.json
+683 verbose from cache /Users/Hunter/.npm/bunyan/0.7.0/package/package.json
+684 silly resolved [ { name: 'abbrev',
+684 silly resolved     version: '1.0.3',
+684 silly resolved     description: 'Like ruby\'s abbrev module, but in js',
+684 silly resolved     author: { name: 'Isaac Z. Schlueter', email: 'i@izs.me' },
+684 silly resolved     main: './lib/abbrev.js',
+684 silly resolved     scripts: { test: 'node lib/abbrev.js' },
+684 silly resolved     repository: { type: 'git', url: 'http://github.com/isaacs/abbrev-js' },
+684 silly resolved     readme: '# abbrev-js\n\nJust like [ruby\'s Abbrev](http://apidock.com/ruby/Abbrev).\n\nUsage:\n\n    var abbrev = require("abbrev");\n    abbrev("foo", "fool", "folding", "flop");\n    \n    // returns:\n    { fl: \'flop\'\n    , flo: \'flop\'\n    , flop: \'flop\'\n    , fol: \'folding\'\n    , fold: \'folding\'\n    , foldi: \'folding\'\n    , foldin: \'folding\'\n    , folding: \'folding\'\n    , foo: \'foo\'\n    , fool: \'fool\'\n    }\n\nThis is handy for command-line scripts, or other cases where you want to be able to accept shorthands.\n',
+684 silly resolved     _id: 'abbrev@1.0.3',
+684 silly resolved     _from: 'abbrev@1' } ]
+685 info install abbrev@1.0.3 into /usr/local/lib/node_modules/ldapjs/node_modules/nopt
+686 info installOne abbrev@1.0.3
+687 verbose from cache /Users/Hunter/.npm/abbrev/1.0.3/package/package.json
+688 info /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync unbuild
+689 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/package.json
+690 info /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan unbuild
+691 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan/package.json
+692 info /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev unbuild
+693 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev/package.json
+694 verbose tar unpack /Users/Hunter/.npm/vasync/1.1.1/package.tgz
+695 verbose tar unpack /Users/Hunter/.npm/bunyan/0.7.0/package.tgz
+696 verbose tar unpack /Users/Hunter/.npm/abbrev/1.0.3/package.tgz
+697 silly lockFile 17f652e4-ules-pooling-node-modules-vasync /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync
+698 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync /Users/Hunter/.npm/17f652e4-ules-pooling-node-modules-vasync.lock
+699 silly lockFile 176d49e9-ules-pooling-node-modules-bunyan /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan
+700 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan /Users/Hunter/.npm/176d49e9-ules-pooling-node-modules-bunyan.lock
+701 silly lockFile 0561baf4-modules-nopt-node-modules-abbrev /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev
+702 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev /Users/Hunter/.npm/0561baf4-modules-nopt-node-modules-abbrev.lock
+703 silly gunzTarPerm modes [ '755', '644' ]
+704 silly gunzTarPerm modes [ '755', '644' ]
+705 silly gunzTarPerm modes [ '755', '644' ]
+706 silly gunzTarPerm extractEntry package.json
+707 silly gunzTarPerm extractEntry package.json
+708 silly gunzTarPerm extractEntry package.json
+709 silly gunzTarPerm extractEntry .npmignore
+710 silly gunzTarPerm extractEntry README.md
+711 silly gunzTarPerm extractEntry README.md
+712 silly gunzTarPerm extractEntry lib/abbrev.js
+713 silly gunzTarPerm extractEntry .npmignore
+714 silly gunzTarPerm extractEntry README.md
+715 silly gunzTarPerm extractEntry LICENSE
+716 silly gunzTarPerm extractEntry lib/vasync.js
+717 silly gunzTarPerm extractEntry foo.js
+718 silly gunzTarPerm extractEntry examples/err.js
+719 silly gunzTarPerm extractEntry jsl.node.conf
+720 silly gunzTarPerm extractEntry Makefile
+721 silly gunzTarPerm extractEntry examples/hi.js
+722 silly gunzTarPerm extractEntry examples/level.js
+723 silly gunzTarPerm extractEntry Makefile.deps
+724 silly gunzTarPerm extractEntry Makefile.targ
+725 silly gunzTarPerm extractEntry examples/multi.js
+726 silly gunzTarPerm extractEntry examples/foreach-parallel.js
+727 silly gunzTarPerm extractEntry examples/server.js
+728 silly gunzTarPerm extractEntry examples/nofail.js
+729 silly gunzTarPerm extractEntry examples/src.js
+730 silly gunzTarPerm extractEntry examples/parallel.js
+731 silly gunzTarPerm extractEntry examples/unstringifyable.js
+732 silly gunzTarPerm extractEntry examples/pipeline.js
+733 silly gunzTarPerm extractEntry foo.html
+734 silly gunzTarPerm extractEntry .gitmodules
+735 silly gunzTarPerm extractEntry tools/timechild.js
+736 silly gunzTarPerm extractEntry tools/timeguard.js
+737 silly gunzTarPerm extractEntry tools/timesrc.js
+738 silly gunzTarPerm extractEntry tools/cutarelease.py
+739 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev/package.json
+740 silly gunzTarPerm extractEntry tools/jsstyle
+741 silly gunzTarPerm extractEntry tools/statsd-notes.txt
+742 silly gunzTarPerm extractEntry AUTHORS
+743 silly gunzTarPerm extractEntry Makefile
+744 silly gunzTarPerm extractEntry bin/bunyan
+745 silly gunzTarPerm extractEntry CHANGES.md
+746 silly gunzTarPerm extractEntry test/cli.test.js
+747 silly gunzTarPerm extractEntry test/ctor.test.js
+748 silly gunzTarPerm extractEntry test/log.test.js
+749 silly lockFile 0561baf4-modules-nopt-node-modules-abbrev /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev
+750 silly gunzTarPerm extractEntry TODO.md
+751 silly gunzTarPerm extractEntry lib/bunyan.js
+752 info preinstall abbrev@1.0.3
+753 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev/package.json
+754 verbose readDependencies using package.json deps
+755 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev/package.json
+756 verbose readDependencies using package.json deps
+757 silly resolved []
+758 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev
+759 info build /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev
+760 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules/abbrev/package.json
+761 verbose linkStuff [ true,
+761 verbose linkStuff   '/usr/local/lib/node_modules',
+761 verbose linkStuff   false,
+761 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules/nopt/node_modules' ]
+762 info linkStuff abbrev@1.0.3
+763 verbose linkBins abbrev@1.0.3
+764 verbose linkMans abbrev@1.0.3
+765 verbose rebuildBundles abbrev@1.0.3
+766 info install abbrev@1.0.3
+767 info postinstall abbrev@1.0.3
+768 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/nopt
+769 info build /usr/local/lib/node_modules/ldapjs/node_modules/nopt
+770 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/nopt/package.json
+771 verbose linkStuff [ true,
+771 verbose linkStuff   '/usr/local/lib/node_modules',
+771 verbose linkStuff   false,
+771 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules' ]
+772 info linkStuff nopt@1.0.10
+773 verbose linkBins nopt@1.0.10
+774 verbose link bins [ { nopt: './bin/nopt.js' },
+774 verbose link bins   '/usr/local/lib/node_modules/ldapjs/node_modules/.bin',
+774 verbose link bins   false ]
+775 verbose linkMans nopt@1.0.10
+776 verbose rebuildBundles nopt@1.0.10
+777 verbose rebuildBundles [ 'abbrev' ]
+778 info install nopt@1.0.10
+779 info postinstall nopt@1.0.10
+780 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/package.json
+781 silly lockFile 17f652e4-ules-pooling-node-modules-vasync /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync
+782 info preinstall vasync@1.1.1
+783 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/package.json
+784 verbose readDependencies using package.json deps
+785 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/package.json
+786 verbose readDependencies using package.json deps
+787 verbose cache add [ 'verror@1.1.0', null ]
+788 silly cache add name=undefined spec="verror@1.1.0" args=["verror@1.1.0",null]
+789 verbose parsed url { pathname: 'verror@1.1.0',
+789 verbose parsed url   path: 'verror@1.1.0',
+789 verbose parsed url   href: 'verror@1.1.0' }
+790 silly cache add name="verror" spec="1.1.0" args=["verror","1.1.0"]
+791 verbose parsed url { pathname: '1.1.0', path: '1.1.0', href: '1.1.0' }
+792 verbose addNamed [ 'verror', '1.1.0' ]
+793 verbose addNamed [ '1.1.0', '1.1.0' ]
+794 silly lockFile 7f70fc78-verror-1-1-0 verror@1.1.0
+795 verbose lock verror@1.1.0 /Users/Hunter/.npm/7f70fc78-verror-1-1-0.lock
+796 verbose url raw verror/1.1.0
+797 verbose url resolving [ 'https://registry.npmjs.org/', './verror/1.1.0' ]
+798 verbose url resolved https://registry.npmjs.org/verror/1.1.0
+799 info retry registry request attempt 1 at 15:49:47
+800 verbose etag "68OV98W5XLFYBHFTBD09JA0Y3"
+801 http GET https://registry.npmjs.org/verror/1.1.0
+802 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan/package.json
+803 silly lockFile 176d49e9-ules-pooling-node-modules-bunyan /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan
+804 info preinstall bunyan@0.7.0
+805 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan/package.json
+806 verbose readDependencies using package.json deps
+807 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan/package.json
+808 verbose readDependencies using package.json deps
+809 silly resolved []
+810 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan
+811 info build /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan
+812 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/bunyan/package.json
+813 verbose linkStuff [ true,
+813 verbose linkStuff   '/usr/local/lib/node_modules',
+813 verbose linkStuff   false,
+813 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules' ]
+814 info linkStuff bunyan@0.7.0
+815 verbose linkBins bunyan@0.7.0
+816 verbose link bins [ { bunyan: './bin/bunyan' },
+816 verbose link bins   '/usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/.bin',
+816 verbose link bins   false ]
+817 verbose linkMans bunyan@0.7.0
+818 verbose rebuildBundles bunyan@0.7.0
+819 info install bunyan@0.7.0
+820 info postinstall bunyan@0.7.0
+821 http 304 https://registry.npmjs.org/verror/1.1.0
+822 silly registry.get cb [ 304,
+822 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+822 silly registry.get     etag: '"68OV98W5XLFYBHFTBD09JA0Y3"',
+822 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:47 GMT',
+822 silly registry.get     'content-length': '0' } ]
+823 verbose etag verror/1.1.0 from cache
+824 verbose read json /Users/Hunter/.npm/verror/1.1.0/package/package.json
+825 silly lockFile 7f70fc78-verror-1-1-0 verror@1.1.0
+826 silly resolved [ { name: 'verror',
+826 silly resolved     version: '1.1.0',
+826 silly resolved     description: 'richer JavaScript errors',
+826 silly resolved     main: './lib/verror.js',
+826 silly resolved     repository:
+826 silly resolved      { type: 'git',
+826 silly resolved        url: 'git://github.com/davepacheco/node-verror.git' },
+826 silly resolved     dependencies: { extsprintf: '1.0.0' },
+826 silly resolved     engines: [ 'node >=0.6.0' ],
+826 silly resolved     readme: '# verror: richer JavaScript errors\n\nThis module provides VError, which is like JavaScript\'s built-in Error class,\nbut supports a "cause" argument and a printf-style message.  The cause argument\ncan be null.  For example:\n\n    if (err)\n        throw (new VError(err, \'operation "%s" failed\', opname));\n\nIf err.message is "file not found" and "opname" is "rm", then the thrown\nexception\'s toString() would return:\n\n       operation "rm" failed: file not found\n\nThis is useful for annotating exceptions up the stack, rather than getting an\nextremely low-level error (like "file not found") for a potentially much higher\nlevel operation.\n\nAdditionally, when printed using node-extsprintf using %r, each exception\'s\nstack is printed.\n\n\n# Example\n\nFirst, install it:\n\n    # npm install verror\n\nNow, use it:\n\n    var mod_fs = require(\'fs\');\n    var mod_extsprintf = require(\'extsprintf\');\n    var mod_verror = require(\'../lib/verror\');\n    \n    mod_fs.stat(\'/nonexistent\', function (err) {\n    \tconsole.log(mod_extsprintf.sprintf(\'%r\',\n    \t    new mod_verror.VError(err, \'operation failed\')));\n    });\n\noutputs:\n\n    EXCEPTION: VError: operation failed: ENOENT, no such file or directory \'/nonexistent\'\n        at Object.oncomplete (/home/dap/node-verror/examples/simple.js:7:6)\n    Caused by: EXCEPTION: Error: Error: ENOENT, no such file or directory \'/nonexistent\'\n',
+826 silly resolved     _id: 'verror@1.1.0',
+826 silly resolved     _from: 'verror@1.1.0' } ]
+827 info install verror@1.1.0 into /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync
+828 info installOne verror@1.1.0
+829 verbose from cache /Users/Hunter/.npm/verror/1.1.0/package/package.json
+830 info /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror unbuild
+831 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/package.json
+832 verbose tar unpack /Users/Hunter/.npm/verror/1.1.0/package.tgz
+833 silly lockFile 98d74da8-dules-vasync-node-modules-verror /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror
+834 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror /Users/Hunter/.npm/98d74da8-dules-vasync-node-modules-verror.lock
+835 silly gunzTarPerm modes [ '755', '644' ]
+836 silly gunzTarPerm extractEntry package.json
+837 silly gunzTarPerm extractEntry .npmignore
+838 silly gunzTarPerm extractEntry README.md
+839 silly gunzTarPerm extractEntry LICENSE
+840 silly gunzTarPerm extractEntry lib/verror.js
+841 silly gunzTarPerm extractEntry jsl.node.conf
+842 silly gunzTarPerm extractEntry Makefile
+843 silly gunzTarPerm extractEntry Makefile.deps
+844 silly gunzTarPerm extractEntry Makefile.targ
+845 silly gunzTarPerm extractEntry examples/missingcause.js
+846 silly gunzTarPerm extractEntry examples/simple.js
+847 silly gunzTarPerm extractEntry .gitmodules
+848 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/package.json
+849 silly lockFile 98d74da8-dules-vasync-node-modules-verror /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror
+850 info preinstall verror@1.1.0
+851 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/package.json
+852 verbose readDependencies using package.json deps
+853 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/package.json
+854 verbose readDependencies using package.json deps
+855 verbose cache add [ 'extsprintf@1.0.0', null ]
+856 silly cache add name=undefined spec="extsprintf@1.0.0" args=["extsprintf@1.0.0",null]
+857 verbose parsed url { pathname: 'extsprintf@1.0.0',
+857 verbose parsed url   path: 'extsprintf@1.0.0',
+857 verbose parsed url   href: 'extsprintf@1.0.0' }
+858 silly cache add name="extsprintf" spec="1.0.0" args=["extsprintf","1.0.0"]
+859 verbose parsed url { pathname: '1.0.0', path: '1.0.0', href: '1.0.0' }
+860 verbose addNamed [ 'extsprintf', '1.0.0' ]
+861 verbose addNamed [ '1.0.0', '1.0.0' ]
+862 silly lockFile 2c670eb8-extsprintf-1-0-0 extsprintf@1.0.0
+863 verbose lock extsprintf@1.0.0 /Users/Hunter/.npm/2c670eb8-extsprintf-1-0-0.lock
+864 verbose url raw extsprintf/1.0.0
+865 verbose url resolving [ 'https://registry.npmjs.org/', './extsprintf/1.0.0' ]
+866 verbose url resolved https://registry.npmjs.org/extsprintf/1.0.0
+867 info retry registry request attempt 1 at 15:49:47
+868 verbose etag "4DNLHNVKQLD4CUSKFEBEPMZKY"
+869 http GET https://registry.npmjs.org/extsprintf/1.0.0
+870 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/buffertools/package.json
+871 silly lockFile c85b32bb--ldapjs-node-modules-buffertools /usr/local/lib/node_modules/ldapjs/node_modules/buffertools
+872 info preinstall buffertools@1.1.0
+873 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/buffertools/package.json
+874 verbose readDependencies using package.json deps
+875 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/buffertools/package.json
+876 verbose readDependencies using package.json deps
+877 silly resolved []
+878 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/buffertools
+879 info build /usr/local/lib/node_modules/ldapjs/node_modules/buffertools
+880 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/buffertools/package.json
+881 verbose linkStuff [ true,
+881 verbose linkStuff   '/usr/local/lib/node_modules',
+881 verbose linkStuff   false,
+881 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules' ]
+882 info linkStuff buffertools@1.1.0
+883 verbose linkBins buffertools@1.1.0
+884 verbose linkMans buffertools@1.1.0
+885 verbose rebuildBundles buffertools@1.1.0
+886 info install buffertools@1.1.0
+887 verbose unsafe-perm in lifecycle false
+888 verbose set uid from=0 to=nobody
+889 verbose set uid from=0 to=-2
+890 silly exec sh "-c" "node-gyp rebuild"
+891 silly sh,-c,node-gyp rebuild,/usr/local/lib/node_modules/ldapjs/node_modules/buffertools spawning
+892 http 304 https://registry.npmjs.org/extsprintf/1.0.0
+893 silly registry.get cb [ 304,
+893 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+893 silly registry.get     etag: '"4DNLHNVKQLD4CUSKFEBEPMZKY"',
+893 silly registry.get     date: 'Sat, 21 Jul 2012 20:49:48 GMT',
+893 silly registry.get     'content-length': '0' } ]
+894 verbose etag extsprintf/1.0.0 from cache
+895 verbose read json /Users/Hunter/.npm/extsprintf/1.0.0/package/package.json
+896 silly lockFile 2c670eb8-extsprintf-1-0-0 extsprintf@1.0.0
+897 silly resolved [ { name: 'extsprintf',
+897 silly resolved     version: '1.0.0',
+897 silly resolved     description: 'extended POSIX-style sprintf',
+897 silly resolved     main: './lib/extsprintf.js',
+897 silly resolved     repository:
+897 silly resolved      { type: 'git',
+897 silly resolved        url: 'git://github.com/davepacheco/node-extsprintf.git' },
+897 silly resolved     engines: [ 'node >=0.6.0' ],
+897 silly resolved     readme: '# extsprintf: extended POSIX-style sprintf\n\nStripped down version of s[n]printf(3c).  We make a best effort to throw an\nexception when given a format string we don\'t understand, rather than ignoring\nit, so that we won\'t break existing programs if/when we go implement the rest\nof this.\n\nThis implementation currently supports specifying\n\n* field alignment (\'-\' flag),\n* zero-pad (\'0\' flag)\n* always show numeric sign (\'+\' flag),\n* field width\n* conversions for strings, decimal integers, and floats (numbers).\n* argument size specifiers.  These are all accepted but ignored, since\n  Javascript has no notion of the physical size of an argument.\n\nEverything else is currently unsupported, most notably: precision, unsigned\nnumbers, non-decimal numbers, and characters.\n\nBesides the usual POSIX conversions, this implementation supports:\n\n* `%j`: pretty-print a JSON object (using node\'s "inspect")\n* `%r`: pretty-print an Error object\n\n# Example\n\nFirst, install it:\n\n    # npm install extsprintf\n\nNow, use it:\n\n    var mod_extsprintf = require(\'extsprintf\');\n    console.log(mod_extsprintf.sprintf(\'hello %25s\', \'world\'));\n\noutputs:\n\n    hello                     world\n',
+897 silly resolved     _id: 'extsprintf@1.0.0',
+897 silly resolved     _from: 'extsprintf@1.0.0' } ]
+898 info install extsprintf@1.0.0 into /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror
+899 info installOne extsprintf@1.0.0
+900 verbose from cache /Users/Hunter/.npm/extsprintf/1.0.0/package/package.json
+901 info /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf unbuild
+902 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf/package.json
+903 verbose tar unpack /Users/Hunter/.npm/extsprintf/1.0.0/package.tgz
+904 silly lockFile ceb6e339-s-verror-node-modules-extsprintf /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf
+905 verbose lock /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf /Users/Hunter/.npm/ceb6e339-s-verror-node-modules-extsprintf.lock
+906 silly gunzTarPerm modes [ '755', '644' ]
+907 silly gunzTarPerm extractEntry package.json
+908 silly gunzTarPerm extractEntry README.md
+909 silly gunzTarPerm extractEntry LICENSE
+910 silly gunzTarPerm extractEntry .gitmodules
+911 silly gunzTarPerm extractEntry examples/simple.js
+912 silly gunzTarPerm extractEntry jsl.node.conf
+913 silly gunzTarPerm extractEntry lib/extsprintf.js
+914 silly gunzTarPerm extractEntry Makefile
+915 silly gunzTarPerm extractEntry Makefile.deps
+916 silly gunzTarPerm extractEntry Makefile.targ
+917 verbose read json /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf/package.json
+918 silly lockFile ceb6e339-s-verror-node-modules-extsprintf /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf
+919 info preinstall extsprintf@1.0.0
+920 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf/package.json
+921 verbose readDependencies using package.json deps
+922 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf/package.json
+923 verbose readDependencies using package.json deps
+924 silly resolved []
+925 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf
+926 info build /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf
+927 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules/extsprintf/package.json
+928 verbose linkStuff [ true,
+928 verbose linkStuff   '/usr/local/lib/node_modules',
+928 verbose linkStuff   false,
+928 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/node_modules' ]
+929 info linkStuff extsprintf@1.0.0
+930 verbose linkBins extsprintf@1.0.0
+931 verbose linkMans extsprintf@1.0.0
+932 verbose rebuildBundles extsprintf@1.0.0
+933 info install extsprintf@1.0.0
+934 info postinstall extsprintf@1.0.0
+935 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror
+936 info build /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror
+937 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules/verror/package.json
+938 verbose linkStuff [ true,
+938 verbose linkStuff   '/usr/local/lib/node_modules',
+938 verbose linkStuff   false,
+938 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/node_modules' ]
+939 info linkStuff verror@1.1.0
+940 verbose linkBins verror@1.1.0
+941 verbose linkMans verror@1.1.0
+942 verbose rebuildBundles verror@1.1.0
+943 verbose rebuildBundles [ 'extsprintf' ]
+944 info install verror@1.1.0
+945 info postinstall verror@1.1.0
+946 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync
+947 info build /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync
+948 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules/vasync/package.json
+949 verbose linkStuff [ true,
+949 verbose linkStuff   '/usr/local/lib/node_modules',
+949 verbose linkStuff   false,
+949 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules/pooling/node_modules' ]
+950 info linkStuff vasync@1.1.1
+951 verbose linkBins vasync@1.1.1
+952 verbose linkMans vasync@1.1.1
+953 verbose rebuildBundles vasync@1.1.1
+954 verbose rebuildBundles [ 'verror' ]
+955 info install vasync@1.1.1
+956 info postinstall vasync@1.1.1
+957 verbose about to build /usr/local/lib/node_modules/ldapjs/node_modules/pooling
+958 info build /usr/local/lib/node_modules/ldapjs/node_modules/pooling
+959 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/pooling/package.json
+960 verbose linkStuff [ true,
+960 verbose linkStuff   '/usr/local/lib/node_modules',
+960 verbose linkStuff   false,
+960 verbose linkStuff   '/usr/local/lib/node_modules/ldapjs/node_modules' ]
+961 info linkStuff pooling@0.2.2
+962 verbose linkBins pooling@0.2.2
+963 verbose linkMans pooling@0.2.2
+964 verbose rebuildBundles pooling@0.2.2
+965 verbose rebuildBundles [ '.bin', 'bunyan', 'vasync' ]
+966 info install pooling@0.2.2
+967 info postinstall pooling@0.2.2
+968 info buffertools@1.1.0 Failed to exec install script
+969 info /usr/local/lib/node_modules/ldapjs/node_modules/buffertools unbuild
+970 verbose from cache /usr/local/lib/node_modules/ldapjs/node_modules/buffertools/package.json
+971 info preuninstall buffertools@1.1.0
+972 info uninstall buffertools@1.1.0
+973 verbose false,/usr/local/lib/node_modules,/usr/local/lib/node_modules/ldapjs/node_modules unbuild buffertools@1.1.0
+974 info postuninstall buffertools@1.1.0
+975 verbose about to build /usr/local/lib/node_modules/ldapjs
+976 info /usr/local/lib/node_modules/ldapjs unbuild
+977 verbose from cache /usr/local/lib/node_modules/ldapjs/package.json
+978 info preuninstall ldapjs@0.5.4
+979 info uninstall ldapjs@0.5.4
+980 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild ldapjs@0.5.4
+981 verbose /usr/local/bin,[object Object] binRoot
+982 info postuninstall ldapjs@0.5.4
+983 error buffertools@1.1.0 install: `node-gyp rebuild`
+983 error `sh "-c" "node-gyp rebuild"` failed with 1
+984 error Failed at the buffertools@1.1.0 install script.
+984 error This is most likely a problem with the buffertools package,
+984 error not with npm itself.
+984 error Tell the author that this fails on your system:
+984 error     node-gyp rebuild
+984 error You can get their info via:
+984 error     npm owner ls buffertools
+984 error There is likely additional logging output above.
+985 error System Darwin 11.3.0
+986 error command "node" "/usr/local/bin/npm" "install" "ldapjs" "-g"
+987 error cwd /Users/Hunter/Desktop/maroonplaza/marooonplaza
+988 error node -v v0.8.2
+989 error npm -v 1.1.36
+990 error code ELIFECYCLE
+991 error message buffertools@1.1.0 install: `node-gyp rebuild`
+991 error message `sh "-c" "node-gyp rebuild"` failed with 1
+992 verbose exit [ 1, true ]
