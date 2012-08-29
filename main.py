@@ -8,7 +8,6 @@ import os
 import jinja2
 
 from google.appengine.ext import db
-from google.appengine.api import users
 
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
@@ -58,7 +57,7 @@ class Calendar(webapp2.RequestHandler):
 			</form>
 		""")
 	def post(self):
-		# And this does the HTTP POST. This will create a confirmation page, unless that should be a separate URL
+		# And this does the HTTP POST, after which it returns to the front page
 		new_event = Event(parent=get_key())
 		new_event.name = self.request.get('name')
 		new_event.start_time = datetime.datetime(int(self.request.get('start_year')),
@@ -98,9 +97,14 @@ class MainHandler(webapp2.RequestHandler):
 		# The actual query, which dumps it into a list
 		mp_events = db.GqlQuery(query, get_key())
 
+		# Create an empty list for each of the next few days
+		now, one_off, two_off, three_off, four_off, five_off, six_off = ([] for i in range(7))
+
 		# Which we then iterate over
 		for event in mp_events:
-			table_string = """
+			distance = (event.start_time - today).days
+
+			event.to_table = """
 				<table>
 					<tr>
 						<td>Name</td>
@@ -127,17 +131,42 @@ class MainHandler(webapp2.RequestHandler):
 						<td>%s</td>
 					</tr>
 				</table>""" % (event.name, event.start_time, event.end_time, event.host, event.venue, event.price, event.desc)
-			self.response.out.write(table_string)
+
+			if distance == 0:
+				now.append(event)
+			elif distance == 1:
+				one_off.append(event)
+			elif distance == 2:
+				two_off.append(event)
+			elif distance == 3:
+				three_off.append(event)
+			elif distance == 4:
+				four_off.append(event)
+			elif distance == 5:
+				five_off.append(event)
+			elif distance == 6:
+				six_off.append(event)
+
+			# self.response.out.write(event.to_string)
 
 		# ISO Weekdays run from 1-7 for Monday-Sunday
 		weekday = datetime.datetime.today().isoweekday()
 		template_values = {
-
-			'weekday': weekday,
+			'now': now,
+			'one_off': one_off,
+			'two_off': two_off,
+			'three_off': three_off,
+			'four_off': four_off,
+			'five_off': five_off,
+			'six_off': six_off,
 		}
 
-		template = jinja_environment.get_template('index.html')
-		self.response.out.write(template.render(template_values))
+		header_template = jinja_environment.get_template('header.html')
+		content_template = jinja_environment.get_template('index.html')
+		footer_template = jinja_environment.get_template('footer.html')
+		self.response.out.write(header_template.render())
+		self.response.out.write(content_template.render(template_values))
+		self.response.out.write(footer_template.render())
 
 # The following code makes App Engine Work
 # Remove debug=True when in production
