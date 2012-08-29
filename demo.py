@@ -4,10 +4,13 @@ import cgi
 import datetime
 import urllib
 import webapp2
+import os
+import jinja2
 
 from google.appengine.ext import db
 from google.appengine.api import users
 
+jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 class Greeting(db.Model):
   """Models an individual Guestbook entry with an author, content, and date."""

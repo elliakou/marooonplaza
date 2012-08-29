@@ -12,8 +12,8 @@ from google.appengine.api import users
 # This is a class that models a single event
 class Event(db.Model):
 	name = db.StringProperty()
-	start_time = db.IntegerProperty()
-	end_time = db.IntegerProperty()
+	start_time = db.DateTimeProperty()
+	end_time = db.DateTimeProperty()
 	host = db.StringProperty()
 	venue = db.StringProperty()
 	price = db.IntegerProperty()
@@ -32,8 +32,21 @@ class Calendar(webapp2.RequestHandler):
 		self.response.out.write("""
 			<form action="/new" method="post" name="event_form">
 				Name <input type="text" name="name"></input><br>
-				Start <input type="text" name="start_time"></input><br>
-				End <input type="text" name="end_time"></input><br>
+
+				Start
+				Y <input type="text" name="start_year"></input>
+				M <input type="text" name="start_month"></input>
+				D <input type="text" name="start_day"></input>
+				H <input type="text" name="start_hour"></input>
+				M <input type="text" name="start_min"></input><br>
+
+				End
+				Y <input type="text" name="end_year"></input>
+				M <input type="text" name="end_month"></input>
+				D <input type="text" name="end_day"></input>
+				H <input type="text" name="end_hour"></input>
+				M <input type="text" name="end_min"></input><br>
+
 				Host <input type="text" name="host"></input><br>
 				Venue <input type="text" name="venue"></input><br>
 				Price <input type="text" name="price"></input><br>
@@ -45,8 +58,16 @@ class Calendar(webapp2.RequestHandler):
 		# And this does the HTTP POST. This will create a confirmation page, unless that should be a separate URL
 		new_event = Event(parent=get_key())
 		new_event.name = self.request.get('name')
-		new_event.start_time = int(self.request.get('start_time'))
-		new_event.end_time = int(self.request.get('end_time'))
+		new_event.start_time = datetime.datetime(int(self.request.get('start_year')),
+												 int(self.request.get('start_month')),
+												 int(self.request.get('start_day')),
+												 int(self.request.get('start_hour')),
+												 int(self.request.get('start_min')))
+		new_event.end_time = datetime.datetime(int(self.request.get('end_year')),
+											   int(self.request.get('end_month')),
+											   int(self.request.get('end_day')),
+											   int(self.request.get('end_hour')),
+											   int(self.request.get('end_min')))
 		new_event.host = self.request.get('host')
 		new_event.venue = self.request.get('venue')
 		new_event.price = int(self.request.get('price'))
@@ -61,7 +82,34 @@ class MainHandler(webapp2.RequestHandler):
 		mp_events = Event.gql("WHERE ANCESTOR IS :1 ORDER BY start_time DESC LIMIT 10", get_key())
 
 		for event in mp_events:
-			self.response.out.write(event.name)
+			table_string = """
+				<table>
+					<tr>
+						<td>Name</td>
+						<td>%s</td>
+					</tr>
+					<tr>
+						<td>Time</td>
+						<td>from %s to %s</td>
+					</tr>
+					<tr>
+						<td>Hosted by</td>
+						<td>%s</td>
+					</tr>
+					<tr>
+						<td>Location</td>
+						<td>%s</td>
+					</tr>
+					<tr>
+						<td>Price</td>
+						<td>%s</td>
+					</tr>
+					<tr>
+						<td>Description</td>
+						<td>%s</td>
+					</tr>
+				</table>""" % (event.name, event.start_time, event.end_time, event.host, event.venue, event.price, event.desc)
+			self.response.out.write(table_string)
 
 		self.response.out.write("""
 			<a href="/new">Add Somethin'</a><br>
@@ -90,13 +138,13 @@ class MainHandler(webapp2.RequestHandler):
 					</th>
 				</tr>
 				<tr>
-					<td id="mon"></td>
-					<td id="tue"></td>
-					<td id="wed"></td>
-					<td id="thu"></td>
-					<td id="fri"></td>
-					<td id="sat"></td>
-					<td id="sun"></td>
+					<td class="mon"></td>
+					<td class="tue"></td>
+					<td class="wed"></td>
+					<td class="thu"></td>
+					<td class="fri"></td>
+					<td class="sat"></td>
+					<td class="sun"></td>
 				</tr>
 			</table>
 		""")
