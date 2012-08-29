@@ -1,17 +1,76 @@
-  <div id="main">
-  	<!-- start slipsum code -->
+<style type="text/css">
+	a div {
+		position: absolute;
+		display: none;
+	}
 
-<p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee. </p>
+	a:hover div {
+		position: absolute;
+		display: inline-block;
+	}
 
-<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+	.event {
+		border: 1px solid #333;
+		background: #ccc;
+	}
+</style>
 
-<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
-
-<!-- please do not remove this line -->
-
-<div style="display:none;">
-<a href="http://slipsum.com">lorem ipsum</a></div>
-
-<!-- end slipsum code -->
-
-  </div>
+<div id="main">
+	<table>
+		{# You may want to calculate days client-side, since you could just do this:
+			- Make an array days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+			- Get today's day of the week, from 0-6 with 0 being Sun. etc. weekday = datetime.today()
+			- for(int i=0; i<7; i++):
+				next_day = days[weekday]
+				weekday++;
+				if weekday > 6:
+					weekday = weekday % 7
+		#}
+		<tr>
+			<th>Today</th>
+			<th>Tomorrow</th>
+			<th>Übermorrow</th>
+			<th>Über^2morrow</th>
+			<th>Über^3morrow</th>
+			<th>Über^4morrow</th>
+			<th>Über^5morrow</th>
+		</tr>
+		<tr>
+			<td>
+				{% for item in now %}
+					<a>{{ item.name }} <div>{{ item.table }}</div></a><br>
+				{% endfor %}
+			</td>
+			<td>
+				{% for item in one_off %}
+					{{ item.table }}
+				{% endfor %}
+			</td>
+			<td>
+				{% for item in two_off %}
+					{{ item.table }}
+				{% endfor %}
+			</td>
+			<td>
+				{% for item in three_off %}
+					{{ item.table }}
+				{% endfor %}
+			</td>
+			<td>
+				{% for item in four_off %}
+					{{ item.table }}
+				{% endfor %}
+			</td>
+			<td>
+				{% for item in five_off %}
+					{{ item.table }}
+				{% endfor %}
+			</td>
+			<td>
+				{% for item in six_off %}
+					{{ item.table }}
+				{% endfor %}
+			</td>
+		</tr>
+	</table>
+</div>

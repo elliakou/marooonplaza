@@ -18,7 +18,7 @@ class Event(db.Model):
 	end_time = db.DateTimeProperty()
 	host = db.StringProperty()
 	venue = db.StringProperty()
-	price = db.IntegerProperty()
+	price = db.FloatProperty()
 	# This next one might need to be a TextProperty
 	desc = db.StringProperty(multiline=True)
 
@@ -72,7 +72,7 @@ class Calendar(webapp2.RequestHandler):
 											   int(self.request.get('end_min')))
 		new_event.host = self.request.get('host')
 		new_event.venue = self.request.get('venue')
-		new_event.price = int(self.request.get('price'))
+		new_event.price = float(self.request.get('price'))
 		new_event.desc = self.request.get('desc')
 		new_event.put()
 		self.redirect("/")
@@ -93,80 +93,87 @@ class MainHandler(webapp2.RequestHandler):
 				AND start_time < DATE(%s, %s, %s)
 				ORDER BY start_time ASC
 				""" % (today.year,today.month,today.day,next_week.year,next_week.month,next_week.day)
+		query2 = """
+				SELECT * FROM Event
+				WHERE ANCESTOR IS :1
+				AND end_time >= DATE(%s, %s, %s)
+				AND end_time < DATE(%s, %s, %s)
+				ORDER BY start_time ASC
+				""" % (today.year,today.month,today.day,next_week.year,next_week.month,next_week.day)
 
 		# The actual query, which dumps it into a list
 		mp_events = db.GqlQuery(query, get_key())
 
 		# Create an empty list for each of the next few days
-		now, one_off, two_off, three_off, four_off, five_off, six_off = ([] for i in range(7))
+		upcoming = [[] for i in range(7)]
 
 		# Which we then iterate over
 		for event in mp_events:
-			distance = (event.start_time - today).days
+			# This stores a json object with the event
+			event.json = """
+				{ 'name': %s,
+				  'host': %s,
+				  'venue': %s,
+				  'start_time': %s,
+				  'end_time': %s,
+				  'price': %s,
+				  'desc': %s
+				}
+			""" % (event.name, event.host, event.venue, event.start_time, event.end_time, event.price, event.desc)
 
-			event.to_table = """
-				<table>
-					<tr>
-						<td>Name</td>
-						<td>%s</td>
-					</tr>
-					<tr>
-						<td>Time</td>
-						<td>from %s to %s</td>
-					</tr>
-					<tr>
-						<td>Hosted by</td>
-						<td>%s</td>
-					</tr>
-					<tr>
-						<td>Location</td>
-						<td>%s</td>
-					</tr>
-					<tr>
-						<td>Price</td>
-						<td>%s</td>
-					</tr>
-					<tr>
-						<td>Description</td>
-						<td>%s</td>
-					</tr>
-				</table>""" % (event.name, event.start_time, event.end_time, event.host, event.venue, event.price, event.desc)
+			# Same as above, except it's an HTML table. This should be removed in production.
+			event.table = """
+				<table class="event">
+					<tr><td><strong>Name</strong></td><td>%s</td></tr>
+					<tr><td><strong>Host</strong></td><td>%s</td></tr>
+					<tr><td><strong>Venue</strong></td><td>%s</td></tr>
+					<tr><td><strong>Start-Time</strong></td><td>%s</td></tr>
+					<tr><td><strong>End-Time</strong></td><td>%s</td></tr>
+					<tr><td><strong>Price</strong></td><td>%s</td></tr>
+					<tr><td><strong>Description</strong></td><td>%s</td></tr>
+				</table>
+			""" % (event.name, event.host, event.venue, event.start_time, event.end_time, event.price, event.desc)
 
-			if distance == 0:
-				now.append(event)
-			elif distance == 1:
-				one_off.append(event)
-			elif distance == 2:
-				two_off.append(event)
-			elif distance == 3:
-				three_off.append(event)
-			elif distance == 4:
-				four_off.append(event)
-			elif distance == 5:
-				five_off.append(event)
-			elif distance == 6:
-				six_off.append(event)
-
-			# self.response.out.write(event.to_string)
+			upcoming[(event.start_time - today).days].append(event)
+		# -- end of for loop --
 
 		# ISO Weekdays run from 1-7 for Monday-Sunday
 		weekday = datetime.datetime.today().isoweekday()
 		template_values = {
-			'now': now,
-			'one_off': one_off,
-			'two_off': two_off,
-			'three_off': three_off,
-			'four_off': four_off,
-			'five_off': five_off,
-			'six_off': six_off,
+			'now': upcoming[0],
+			'one_off': upcoming[1],
+			'two_off': upcoming[2],
+			'three_off': upcoming[3],
+			'four_off': upcoming[4],
+			'five_off': upcoming[5],
+			'six_off': upcoming[6],
 		}
 
 		header_template = jinja_environment.get_template('header.html')
-		content_template = jinja_environment.get_template('index.html')
+		content_template = jinja_environment.get_template('main.html')
 		footer_template = jinja_environment.get_template('footer.html')
 		self.response.out.write(header_template.render())
 		self.response.out.write(content_template.render(template_values))
 		self.response.out.write(footer_template.render())
+
+	# Helper function that tests if a datetime falls within a period of time, [start, end)
+	def between(start, end, test):
+		if start <= test:
+			if end > test:
+				return true
+		return false
+
+	# Helper function that tests if an event is going on between a given period of time, [start, end),
+	# useful for multi-day events
+	def occurs(start, end, event):
+		if between(start, end, event.start_time):
+			return true
+		elif between(start, end, event.end_time):
+			return true
+		else:
+			return false
+
+# -- end of MainHandler --
 
 # The following code makes App Engine Work
 # Remove debug=True when in production
