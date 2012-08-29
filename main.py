@@ -4,10 +4,13 @@ import cgi
 import datetime
 import urllib
 import webapp2
+import os
+import jinja2
 
 from google.appengine.ext import db
 from google.appengine.api import users
 
+jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 # This is a class that models a single event
 class Event(db.Model):
@@ -30,7 +33,7 @@ class Calendar(webapp2.RequestHandler):
 	def get(self):
 		# This should be the page to post an event.
 		self.response.out.write("""
-			<form action="/new" method="post" name="event_form">
+			<form action="/submit" method="post" name="event_form">
 				Name <input type="text" name="name"></input><br>
 
 				Start
@@ -78,9 +81,24 @@ class Calendar(webapp2.RequestHandler):
 # This code will run when someone loads index
 class MainHandler(webapp2.RequestHandler):
 	def get(self):
-		# Write HTML directly to the page from this script. This is temporary and for testing functionality only.
-		mp_events = Event.gql("WHERE ANCESTOR IS :1 ORDER BY start_time DESC LIMIT 10", get_key())
+		# The lower and upper bounds, i.e. today and seven days from now
+		today = datetime.datetime.today()
+		next_week = today + datetime.timedelta(days=7)
+		# Build the query to select the events for the next seven days.
 
+		# This is done outside of the GqlQuery call--for some reason it doesn't like format strings
+		query = """
+				SELECT * FROM Event
+				WHERE ANCESTOR IS :1
+				AND start_time >= DATE(%s, %s, %s)
+				AND start_time < DATE(%s, %s, %s)
+				ORDER BY start_time ASC
+				""" % (today.year,today.month,today.day,next_week.year,next_week.month,next_week.day)
+
+		# The actual query, which dumps it into a list
+		mp_events = db.GqlQuery(query, get_key())
+
+		# Which we then iterate over
 		for event in mp_events:
 			table_string = """
 				<table>
@@ -111,47 +129,19 @@ class MainHandler(webapp2.RequestHandler):
 				</table>""" % (event.name, event.start_time, event.end_time, event.host, event.venue, event.price, event.desc)
 			self.response.out.write(table_string)
 
-		self.response.out.write("""
-			<a href="/new">Add Somethin'</a><br>
-			<table>
-				<tr>
-					<th>
-						Monday
-					</th>
-					<th>
-						Tuesday
-					</th>
-					<th>
-						Wednesday
-					</th>
-					<th>
-						Thursday
-					</th>
-					<th>
-						Friday
-					</th>
-					<th>
-						Saturday
-					</th>
-					<th>
-						Sunday
-					</th>
-				</tr>
-				<tr>
-					<td class="mon"></td>
-					<td class="tue"></td>
-					<td class="wed"></td>
-					<td class="thu"></td>
-					<td class="fri"></td>
-					<td class="sat"></td>
-					<td class="sun"></td>
-				</tr>
-			</table>
-		""")
+		# ISO Weekdays run from 1-7 for Monday-Sunday
+		weekday = datetime.datetime.today().isoweekday()
+		template_values = {
+
+			'weekday': weekday,
+		}
+
+		template = jinja_environment.get_template('index.html')
+		self.response.out.write(template.render(template_values))
 
 # The following code makes App Engine Work
 # Remove debug=True when in production
-app = webapp2.WSGIApplication([('/', MainHandler), ('/new', Calendar)], debug=True)
+app = webapp2.WSGIApplication([('/', MainHandler), ('/submit', Calendar)], debug=True)
 
 def main():
 	run_wsgi_app(application)

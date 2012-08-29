@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Maroon Plaza</title>
+	</head>
+	<body>
+		<a href="/submit">Add Somethin'</a><br>
+		<table>
+			<tr>
+				<th class="mon {% if weekday == 1 %} active {% endif %}">Monday</th>
+				<th class="mon {% if weekday == 2 %} active {% endif %}">Tuesday</th>
+				<th class="mon {% if weekday == 3 %} active {% endif %}">Wednesday</th>
+				<th class="mon {% if weekday == 4 %} active {% endif %}">Thursday</th>
+				<th class="mon {% if weekday == 5 %} active {% endif %}">Friday</th>
+				<th class="mon {% if weekday == 6 %} active {% endif %}">Saturday</th>
+				<th class="mon {% if weekday == 7 %} active {% endif %}">Sunday</th>
+			</tr>
+			<tr>
+				<td class="mon {% if weekday == 1 %} active {% endif %}"></td>
+				<td class="tue {% if weekday == 2 %} active {% endif %}"></td>
+				<td class="wed {% if weekday == 3 %} active {% endif %}"></td>
+				<td class="thu {% if weekday == 4 %} active {% endif %}"></td>
+				<td class="fri {% if weekday == 5 %} active {% endif %}"></td>
+				<td class="sat {% if weekday == 6 %} active {% endif %}"></td>
+				<td class="sun {% if weekday == 7 %} active {% endif %}"></td>
+			</tr>
+		</table>
+	</body>
+</html>
