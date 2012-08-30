@@ -93,13 +93,6 @@ class MainHandler(webapp2.RequestHandler):
 				AND start_time < DATE(%s, %s, %s)
 				ORDER BY start_time ASC
 				""" % (today.year,today.month,today.day,next_week.year,next_week.month,next_week.day)
-		query2 = """
-				SELECT * FROM Event
-				WHERE ANCESTOR IS :1
-				AND end_time >= DATE(%s, %s, %s)
-				AND end_time < DATE(%s, %s, %s)
-				ORDER BY start_time ASC
-				""" % (today.year,today.month,today.day,next_week.year,next_week.month,next_week.day)
 
 		# The actual query, which dumps it into a list
 		mp_events = db.GqlQuery(query, get_key())
