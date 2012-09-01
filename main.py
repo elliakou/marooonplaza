@@ -22,10 +22,12 @@ class Event(db.Model):
 	# This next one might need to be a TextProperty
 	desc = db.StringProperty(multiline=True)
 
+
 # There's functionality for multiple calendars if that's ever a feature
 # Otherwise always call this with no arguments
 def get_key(event_key=None):
 	return db.Key.from_path('Calendar', event_key or 'default')
+
 
 # Datastore related, also handles event adding
 class Calendar(webapp2.RequestHandler):
@@ -76,6 +78,7 @@ class Calendar(webapp2.RequestHandler):
 		new_event.desc = self.request.get('desc')
 		new_event.put()
 		self.redirect("/")
+
 
 # This code will run when someone loads index
 class MainHandler(webapp2.RequestHandler):
@@ -165,8 +168,18 @@ class MainHandler(webapp2.RequestHandler):
 			return true
 		else:
 			return false
-
 # -- end of MainHandler --
+
+
+def About(webapp2.RequestHandler):
+	header_template = jinja_environment.get_template('header.html')
+	content_template = jinja_environment.get_template('about.html')
+	footer_template = jinja_environment.get_template('footer.html')
+	self.response.out.write(header_template.render())
+	self.response.out.write(content_template.render())
+	self.response.out.write(footer_template.render())
+# -- end of About --
+
 
 # The following code makes App Engine Work
 # Remove debug=True when in production
