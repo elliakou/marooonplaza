@@ -127,7 +127,7 @@ class MainHandler(webapp2.RequestHandler):
 				</table>
 			""" % (event.name, event.host, event.venue, event.start_time, event.end_time, event.price, event.desc)
 
-			upcoming[(event.start_time - today).days].append(event)
+			upcoming[(event.start_time.date() - today.date()).days].append(event)
 		# -- end of for loop --
 
 		# ISO Weekdays run from 1-7 for Monday-Sunday
