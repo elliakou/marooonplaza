@@ -257,17 +257,15 @@ h1.logo{
 }
 a#navlink{
 	font-size: 20px;
-	padding-right: 10px;
 	font-family: 'ProximaNovaT-Thin', Arial, sans-serif;
 	color: #FFF;
 	text-decoration: none;
 	}
-a.listnavb{
-	font-family: 'Proxima-NovaT-Bold', Helvetica, Arial, sans-serif;
-	color: #000;
-	text-decoration: none;
-	}
-
+div.day1{
+	width:200px;
+	background-color: FFF;
+	
+}
 
 
 
