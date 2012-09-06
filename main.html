@@ -1,39 +1,28 @@
-<style type="text/css">
-	a div {
-		position: absolute;
-		display: none;
-	}
-
-	a:hover div {
-		position: absolute;
-		display: inline-block;
-	}
-
-	.event {
-		border: 1px solid #333;
-		background: #ccc;
-	}
-</style>
 
 <div id="main">
 	<table>
-		{# You may want to calculate days client-side, since you could just do this:
-			- Make an array days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-			- Get today's day of the week, from 0-6 with 0 being Sun. etc. weekday = datetime.today()
-			- for(int i=0; i<7; i++):
-				next_day = days[weekday]
-				weekday++;
-				if weekday > 6:
-					weekday = weekday % 7
-		#}
 		<tr>
-			<th>Today</th>
-			<th>Tomorrow</th>
-			<th>Übermorrow</th>
-			<th>Über^2morrow</th>
-			<th>Über^3morrow</th>
-			<th>Über^4morrow</th>
-			<th>Über^5morrow</th>
+			<th>
+				<h1></script>Today</h1>
+			</th>
+			<th>
+				<h1>Tomorrow</h1>
+			</th>
+			<th>
+				<h1>Übermorrow</h1>
+			</th>
+			<th>
+				<h1>Über^2morrow</h1>
+			</th>
+			<th>
+				<h1>Über^3morrow</h1>
+			</th>
+			<th>
+				<h1>Über^4morrow</h1>
+			</th>
+			<th>
+				<h1>Über^5morrow</h1>
+			</th>
 		</tr>
 		<tr>
 			<td>
